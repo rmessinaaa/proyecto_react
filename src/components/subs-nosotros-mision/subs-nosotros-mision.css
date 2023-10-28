@@ -1,0 +1,28 @@
+.container-fluid-celeste {
+    background-color: #0597f2;
+    border-radius: 50em;
+  }
+
+.container-celeste{
+    padding: 50px;
+}
+
+.row{
+    margin:1em
+}
+
+.col{
+    margin: 1em
+}
+
+.titulo-primario-blanco{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #f2f2f2;
+}
+
+.parrafo-blanco{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #f2f2f2
+}

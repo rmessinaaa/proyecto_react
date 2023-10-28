@@ -1,0 +1,43 @@
+.container-fluid-home-celeste {
+    background-color: #0597f2;
+    border-radius: 50em;
+  }
+
+.container-celeste{
+    padding: 50px;
+}
+
+.row{
+    margin:1em
+}
+
+.col{
+    margin: 1em
+}
+
+.titulo-primario-blanco{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #f2f2f2;
+}
+
+.parrafo-blanco{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #f2f2f2
+}
+
+.button-azul{
+    border-radius: 3em;
+    background-color: #0f3240;
+    padding: 0.5em 2em;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #F2F2F2
+}
+
+.button-azul:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s
+}
