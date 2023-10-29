@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Boton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: #0597f2;
+    color: white;
+    position: relative;
+    transition: background-color 1ms;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    
+}
+
+.Boton:active{
+    background-color: #1ed9d9 ;
+}
+
+.Boton::before, 
+.Boton::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 15px;
+    background-color: white;
+}
+
+.Boton::before {
+    transform: translate(-50%, -50%);
+}
+
+.Boton::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #0f3240
+}
