@@ -1,7 +1,8 @@
 import logo from './logo.svg';
-import { BrowserRouter, Route, Routes, Navigate, NavLink } from 'react-router-dom';
+import Infopersonal from './components/informacionPersonal/infoPersonal';
 import './App.css';
 
+import PaginaNosotros from './components/pagina-nosotros/pagina-nosotros';
 
 
 // borrar modulos importados
@@ -9,7 +10,6 @@ import './App.css';
 
 function App() {
   return (
-    
     <BrowserRouter>
     <Nav/>
       <Routes>
@@ -20,8 +20,7 @@ function App() {
         <Route path='#' element = {"E"}/>
       </Routes>
     </BrowserRouter>
-    
-  );
+    );
 }
 
 export default App;
