@@ -5,9 +5,58 @@ body{
   background-color: #f2f2f2;
 }
 
+.container-fluid-blanco {
+  background-color: #F2F2F2;
+  border-radius: 50em;
+}
+
+.container-fluid-celeste {
+  background-color: #0597f2;
+  border-radius: 50em;
+}
+
+.container-blanco{
+  padding: 50px;
+  text-align: center;
+}
+
+.container-celeste{
+  padding: 50px;
+}
+
 .titulos-principales{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #0f3240;
   font-size: 3em;
+  text-align: center;
+}
+
+.titulo-secundario-azul{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #0f3240;
+  text-align: center
+}
+
+.titulo-secundario-blanco{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #f2f2f2;
+  text-align: center
+}
+
+.parrafo-celeste{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #0597F2;
+  text-align: center
+  
+}
+
+.parrafo-blanco{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #f2f2f2;
+  text-align: center
 }
