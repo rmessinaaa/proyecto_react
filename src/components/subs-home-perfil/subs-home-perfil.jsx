@@ -6,7 +6,7 @@ function SubsHomePerfil(){
         <div className="container-fluid container-fluid-celeste">
             <div className='container container-celeste'>
                 <div className="row align-items-center justify-content-center">
-                    <h1 className='titulo-primario-blanco'>Perfil</h1>
+                    <h2 className='titulo-secundario-blanco'>Perfil</h2>
                 </div>
                 <div className="row align-items-center justify-content-center">
                     <div className="col-md-6 text-center">

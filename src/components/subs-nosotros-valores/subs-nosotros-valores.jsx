@@ -6,7 +6,7 @@ function SubsNosotrosValores(){
         <div className="container-fluid container-fluid-blanco">
             <div className='container container-blanco'>
                 <div className="row align-items-center justify-content-center">
-                    <h1 className="titulo-primario-azul">Valores y principios</h1>
+                    <h2 className="titulo-secundario-azul">Valores y principios</h2>
                 </div>
                 <div className="row align-items-center justify-content-center">
                     <div className="col-md-6 text-center">
