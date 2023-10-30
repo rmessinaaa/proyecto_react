@@ -1,0 +1,26 @@
+.container-fluid{
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-center{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #0f3240;
+    
+}
+
+.img-fluid{
+    border-radius: 50%;
+    width: 180px;
+    margin-top: 20px;
+}
+
+#boton{
+border-radius: 50px;
+background-color: #0f3240;
+color: white;
+height: 40px;
+width: 200px;
+margin-top: 20px;
+} 
