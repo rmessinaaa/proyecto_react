@@ -10,11 +10,16 @@ import './App.css';
 function App() {
   return (
     
-    <div className="App">
-      {/* Pruebas: Prueba lo que quieras, pero esto tiene que quedar vacío, lo que insertes para ver el renderizado, después tienes que eliminarlo */}
-        <Infopersonal/>
-      
-    </div>
+    <BrowserRouter>
+    <Nav/>
+      <Routes>
+        <Route path='#' element = {"A"}/>
+        <Route path='#' element = {"B"}/>
+        <Route path='#' element = {"C"}/>
+        <Route path='#' element = {"D"}/>
+        <Route path='#' element = {"E"}/>
+      </Routes>
+    </BrowserRouter>
     
   );
 }
