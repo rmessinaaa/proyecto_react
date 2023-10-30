@@ -3,22 +3,18 @@ import { BrowserRouter, Route, Routes, Navigate, NavLink } from 'react-router-do
 import './App.css';
 
 
+
 // borrar modulos importados
 
 
 function App() {
   return (
     
-    <BrowserRouter>
-    <Nav/>
-      <Routes>
-        <Route path='#' element={"A"}/>
-        <Route path='#' element={"B"}/>
-        <Route path='#' element={"C"}/>
-        <Route path='#' element={"D"}/>
-        <Route path='#' element={"E"}/>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      {/* Pruebas: Prueba lo que quieras, pero esto tiene que quedar vacío, lo que insertes para ver el renderizado, después tienes que eliminarlo */}
+        <Infopersonal/>
+      
+    </div>
     
   );
 }
