@@ -1,34 +1,32 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
 
-function TarjetaPaginaPrincipal() {
-  const cardsData = [
-    {
-      title: "Campaña 1",
-      imageSrc: "proyecto_react/src/components/Tarjeta-pagina-terciaria/sinergiafoto.png",
-      description: "Descripción de la tarjeta 1...",
-    },
-    {
-      title: "Campaña 2",
-      imageSrc: "proyecto_react/src/components/Tarjeta-pagina-terciaria/Tarjeta-pagina-terciaria.jsx",
-      description: "Descripción de la tarjeta 2...",
-    }
-  ];
-
+const VerticalCards = () => {
   return (
-    <div>
-      {cardsData.map((data, index) => (
-        <Card key={index} className="m-4 p-4">
-          <Card.Img variant="top" src={data.imageSrc} style={{ height: '200px' }} />
-          <Card.Body className="d-flex flex-column align-items-center">
-            <Card.Title>{data.title}</Card.Title>
-            <Card.Text>{data.description}</Card.Text>
-            <button className="btn btn-primary mt-auto">Ver más</button>
-          </Card.Body>
-        </Card>
-      ))}
+    <div className="container">
+      <div className="row no-gutters">
+        <div className="col-md-12">
+          <div className="card" style={{ width: '15rem' }}>
+            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 1" />
+            <div className="card-body">
+              <h5 className="card-title">Campaña 1</h5>
+              <p className="card-text">Descripción de la Tarjeta 1</p>
+              <a href="#" className="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-12">
+          <div className="card" style={{ width: '15rem' }}>
+            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 2" />
+            <div className="card-body">
+              <h5 className="card-title">Campaña 2</h5>
+              <p className="card-text">Descripción de la Tarjeta 2</p>
+              <a href="#" className="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default TarjetaPaginaPrincipal;
+export default VerticalCards;

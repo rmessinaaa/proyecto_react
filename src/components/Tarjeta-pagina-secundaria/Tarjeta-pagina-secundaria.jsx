@@ -1,48 +1,54 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
 
-function TarjetaPaginaPrincipal() {
-  const cardsData = [
-    {
-      title: "Campaña 1",
-      imageSrc: "proyecto_react/src/Tarjeta-pagina-secundaria/sinergiafoto.png",
-      description: "Descripción de la tarjeta 1...",
-    },
-    {
-      title: "Campaña 2",
-      imageSrc: "proyecto_react/src/Tarjeta-pagina-secundaria/sinergiafoto.png",
-      description: "Descripción de la tarjeta 2...",
-    },
-    {
-      title: "Campaña 3",
-      imageSrc: "proyecto_react/src/Tarjeta-pagina-secundaria/sinergiafoto.png",
-      description: "Descripción de la tarjeta 3...",
-    },
-    {
-      title: "Campaña 4",
-      imageSrc: "proyecto_react/src/Tarjeta-pagina-secundaria/sinergiafoto.png",
-      description: "Descripción de la tarjeta 4...",
-    },
-  ];
-
+const Card2 = () => {
   return (
     <div className="container">
       <div className="row">
-        {cardsData.map((data, index) => (
-          <div key={index} className="col-md-3">
-            <Card>
-              <Card.Img variant="top" src={data.imageSrc} />
-              <Card.Body className="d-flex flex-column align-items-center">
-                <Card.Title>{data.title}</Card.Title>
-                <Card.Text>{data.description}</Card.Text>
-                <button className="btn btn-primary mt-auto">Ver más</button>
-              </Card.Body>
-            </Card>
+        <div className="col-md-3">
+          <div className="card">
+            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 1" />
+            <div className="card-body">
+              <h5 className="card-title">Campaña 1</h5>
+              <p className="card-text">Descripción de la Tarjeta 1</p>
+              <a href="#" className="btn btn-primary">Ver más</a>
+            </div>
           </div>
-        ))}
+        </div>
+        <div className="col-md-3">
+          <div className="card">
+            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 2" />
+            <div className="card-body">
+              <h5 className="card-title">Campaña 2</h5>
+              <p className="card-text">Descripción de la Tarjeta 2</p>
+              <a href="#" className="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-3">
+          <div className="card">
+            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 3" />
+            <div className="card-body">
+              <h5 className="card-title">Campaña 3</h5>
+              <p className="card-text">Descripción de la Tarjeta 3</p>
+              <a href="#" className="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-3">
+          <div className="card">
+            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 4" />
+            <div className="card-body">
+              <h5 className="card-title">Campaña 4</h5>
+              <p className="card-text">Descripción de la Tarjeta 4</p>
+              <a href="#" className="btn btn-primary">Ver más</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default TarjetaPaginaPrincipal;
+export default Card2;
