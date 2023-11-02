@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopNav } from "./components/Navbar/data/navbars";
+import {Navigate} from "react-router-dom";
 
 const Navbar = () => {
   const [navItems, setNavItems] = useState([]);
@@ -24,6 +25,7 @@ const Navbar = () => {
     <div className="nav__wrapper">
       <div className="container">
         <nav className="nav">
+        {/* eslint-disable-next-line */}
           <a href="#" className="nav__brand">
           <img src="logo.png"  />
           </a>
