@@ -1,26 +1,14 @@
-import logo from './logo.svg';
-import Infopersonal from './components/informacionPersonal/infoPersonal';
-import './App.css';
-
-import PaginaNosotros from './components/pagina-nosotros/pagina-nosotros';
-
-
-// borrar modulos importados
-
+import React from 'react';
+import VerticalCards from './components/Tarjeta-pagina-terciaria/Tarjeta-pagina-terciaria';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Nav/>
-      <Routes>
-        <Route path='#' element = {"A"}/>
-        <Route path='#' element = {"B"}/>
-        <Route path='#' element = {"C"}/>
-        <Route path='#' element = {"D"}/>
-        <Route path='#' element = {"E"}/>
-      </Routes>
-    </BrowserRouter>
-    );
+    <div>
+      <h1>Tarjetas</h1>
+      <VerticalCards />
+    
+    </div>
+  );
 }
 
 export default App;
