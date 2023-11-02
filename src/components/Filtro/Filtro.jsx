@@ -32,9 +32,9 @@ const handSelectInstitucion = (e) => {
     }
 
     return (
-    <div className="container">
-        <h3 className="titulo">Filtra tu búsqueda:</h3>
-            <h4 className="subtitulo">Categoría</h4>
+    <div className="container-filtro align-items-center justify-content-center">
+        <h4 className="titulo">Filtra tu búsqueda:</h4>
+            <h6 className="subtitulo">Categoría</h6>
             
             <Select 
             className="opciones" 
@@ -46,7 +46,7 @@ const handSelectInstitucion = (e) => {
             
             </Select >
             <hr></hr>
-            <h4 className="subtitulo">Valor</h4>
+            <h6 className="subtitulo">Valor</h6>
             <Select 
             className="opciones" 
             options={valores} 
@@ -57,7 +57,7 @@ const handSelectInstitucion = (e) => {
                 
             </Select >
             <hr></hr>
-            <h4 className="subtitulo">Instituciones</h4>
+            <h6 className="subtitulo">Instituciones</h6>
            
             <Select 
             className="opciones" 

@@ -1,12 +1,13 @@
 
-.container {
+.container-filtro {
+    align-items: center ;
     width: 365px;
-    height: 550px;
-    border: solid 0.01cm;
-    border-radius:5%;
+    height: auto;
+    border-radius:4em;
     background-color: #0597f2;
-    margin: 5em;
-    box-shadow: 1px 1px 1px 1px rgb(0 90 0 / 50%);
+    margin: 2.5em;
+    padding-bottom: 3em;
+    box-shadow: 3px 3px 1px 1px rgb(#ffffff);
     
 }
 
@@ -23,9 +24,9 @@
     margin-right: 5em;
     margin-top: 1em;
     margin-bottom: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: white;
-    padding: 1%;
+    padding-left: 1.9em;
    
     
 }

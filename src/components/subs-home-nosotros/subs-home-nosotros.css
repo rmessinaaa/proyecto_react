@@ -18,13 +18,15 @@
 .titulo-secundario-azul{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #0f3240
+    color: #0f3240;
+    text-align: center;
   }
 
 .parrafo-celeste{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: #0597F2
+    color: #0597F2;
+    text-align: center;
   }
 
 .button-azul{
