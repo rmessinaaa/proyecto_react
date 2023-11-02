@@ -5,14 +5,11 @@ import Filtro from "../Filtro/Filtro";
 function SubsBuscadorFiltro () {
     return (
         <div>
-            <div>
-                <h2 className="titulo-secundario-azul">Filtro</h2>
-            </div>
             <div className='container centrar-contenido'>
                 <Filtro />
             </div>
             <div className='centrar-contenido'>
-                <button type="button" className="button-azul">Conoce más</button>
+                <button type="button" className="button-azul">Buscar</button>
             </div>
         </div>
     )

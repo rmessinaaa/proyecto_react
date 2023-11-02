@@ -20,14 +20,22 @@ function PaginaBuscador () {
                     </form>
                 </div>
             </div>
+            <div className="row align-items-center justify-content-center contenedor-cards-resultados-busqueda">
+                <div className="col-md-4 text-center">
+                    <h2 className="titulo-secundario-azul">Filtro</h2>
+                </div>
+                <div className="col-md-8 text-center">
+                    <h2 className="titulo-secundario-azul">Resultados de búsqueda</h2>
+                </div>
+            </div>
             <div className="row align-items-center justify-content-center">
-                    <div className="col-md-4 text-center">
-                        <SubsBuscadorFiltro />
-                    </div>
-                    <div className="col-md-8 text-center">
-                        <SubsBuscadorResultados />
-                    </div>
-                </div>           
+                <div className="col-md-4 text-center">
+                    <SubsBuscadorFiltro />
+                </div>
+                <div className="col-md-8 text-center">
+                    <SubsBuscadorResultados />
+                </div>
+            </div>           
         </div>
     </div>
     )

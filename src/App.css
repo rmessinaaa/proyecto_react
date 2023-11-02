@@ -124,3 +124,9 @@ body{
   justify-content: center; /* Para centrar horizontalmente */
   align-items: center;     /* Para centrar verticalmente */
 }
+
+.contenedor-cards-resultados-busqueda{
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila cuando el espacio es insuficiente */
+  justify-content: space-between;
+}
