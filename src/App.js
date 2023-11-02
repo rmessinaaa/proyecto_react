@@ -15,6 +15,7 @@ function App() {
     return (
         <div>
           <BrowserRouter>
+          <Navbar/>
             <Routes>
               <Route path='/' element={<PaginaInicio/>}></Route>
               <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
@@ -25,13 +26,6 @@ function App() {
           </BrowserRouter>
         </div>
     );
-  return (
-    <div>
-
-  
-    
-    </div>
-  );
 }
 
 export default App;

@@ -90,7 +90,7 @@ body{
 }
 
 .App-link {
-  color: #61dafb;
+  color: white;
 }
 
 @keyframes App-logo-spin {
@@ -100,4 +100,7 @@ body{
   to {
     transform: rotate(360deg);
   }
+}
+a {
+  color: white;
 }

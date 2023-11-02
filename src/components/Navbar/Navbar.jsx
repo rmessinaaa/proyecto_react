@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopNav } from "./data/navbars";
-import {Navigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
   const [navItems, setNavItems] = useState([]);
@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className="nav">
         {/* eslint-disable-next-line */}
           <a href="#" className="nav__brand">
-          <img src="logo.png"  />
+          <img src="/ilustraciones/logo.png" />
           </a>
           <ul className={collapse}>
             {navItems.map((item) => (
