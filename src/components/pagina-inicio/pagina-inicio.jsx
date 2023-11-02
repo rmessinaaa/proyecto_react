@@ -7,7 +7,7 @@ import SubsHomeCampañas from '../subs-home-campañas/subs-home-campañas';
 
 function PaginaInicio() {
     return (
-        <div>
+        <div className='bg-paginas'>
             <div className="container-fluid">
                 <div className='container container-blanco'>
                     <h1 className='titulos-principales'>Inicio</h1>
