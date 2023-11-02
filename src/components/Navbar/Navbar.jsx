@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className="nav">
         {/* eslint-disable-next-line */}
           <a href="#" className="nav__brand">
-          <img src="logo.png"  />
+          <img src="/ilustraciones/logo.png" />
           </a>
           <ul className={collapse}>
             {navItems.map((item) => (
