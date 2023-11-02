@@ -5,7 +5,7 @@ import SubsPerfilIntereses from '../subs-perfil-intereses/subs-perfil-intereses'
 
 function PaginaPerfil(){
     return(
-        <div>
+        <div className='bg-paginas'>
             <div className="container-fluid">
                 <div className='container container-blanco'>
                     <h1 className='titulos-principales'>Tu perfil</h1>

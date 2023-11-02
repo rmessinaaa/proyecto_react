@@ -1,8 +1,4 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .Boton {
     width: 30px;
@@ -12,7 +8,7 @@
     background-color: #0597f2;
     color: white;
     position: relative;
-    transition: background-color 1ms;
+
     margin-left: 10px;
     margin-bottom: 5px;
     

@@ -5,7 +5,7 @@ import SubsBuscadorResultados from '../subs-buscador-resultados/subs-buscador-re
 
 function PaginaBuscador () {
     return (
-        <div>
+        <div className='bg-paginas'>
             <div>
             <div className="container-fluid">
                 <div className='container container-blanco'>

@@ -1,7 +1,4 @@
-
-
-
-body{
+.bg-paginas{
   background-color: #f2f2f2;
 }
 
@@ -9,78 +6,63 @@ body{
   background-color: #F2F2F2;
   border-radius: 50em;
 }
-
 .container-fluid-celeste {
-  background-color: #0597f2;
+  background-color: #0597F2;
   border-radius: 50em;
 }
-
 .container-blanco{
   padding: 50px;
   text-align: center;
 }
-
 .container-celeste{
   padding: 50px;
-  text-align: center;
 }
-
 .titulos-principales{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #0f3240;
+  color: #0F3240;
   font-size: 3em;
   text-align: center;
 }
-
 .titulo-secundario-azul{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #0f3240;
+  color: #0F3240;
   text-align: center
 }
-
 .titulo-secundario-blanco{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #f2f2f2;
+  color: #F2F2F2;
   text-align: center
 }
-
 .parrafo-celeste{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #0597F2;
   text-align: center
-  
 }
-
 .parrafo-blanco{
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  color: #f2f2f2;
+  color: #F2F2F2;
   text-align: center
 }
-
 /* NAVBAR RESPONSIVE*/
-
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
-  background-color: #282c34;
+  background-color: #282C34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -89,11 +71,9 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: white;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -102,42 +82,31 @@ body{
     transform: rotate(360deg);
   }
 }
-
 /* PARA CENTRAR CONTENIDO EN CONTENEDORES*/
-
 .centrar-contenido{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-
 a {
   text-decoration: none !important;}
-
 a:hover {
   color: rgb(228, 228, 228); /* Establece el color para los enlaces cuando el mouse está sobre ellos */
 }
-
 a:visited {
-  color: #ffffff; /* Establece el color para los enlaces visitados */
+  color: #FFFFFF; /* Establece el color para los enlaces visitados */
 }
-
-
 a {
   text-decoration: none !important;}
-
 a:hover {
   color: rgb(228, 228, 228); /* Establece el color para los enlaces cuando el mouse está sobre ellos */
 }
-
 a:visited {
-  color: #ffffff; /* Establece el color para los enlaces visitados */
+  color: #FFFFFF; /* Establece el color para los enlaces visitados */
 }
-
 /* esto es la personalizacion del carrito */
 .carrito-container {
-  background-color: #f0f0f0;
+  background-color: #F0F0F0;
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 5px;
@@ -146,12 +115,9 @@ a:visited {
   max-width: 400px;
   margin: 0 auto;
 }
-
-
 label {
   font-weight: bold;
 }
-
 .carrito-input {
   width: 100%;
   padding: 10px;
@@ -159,7 +125,6 @@ label {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
 .carrito-button {
   background-color: #007BFF;
   color: #fff;
@@ -169,17 +134,13 @@ label {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .carrito-button:hover {
-  background-color: #0056b3;
+  background-color: #0056B3;
 }
-
-
 .donaciones-list {
   list-style: none;
   padding: 0;
 }
-
 .donacion-item {
   background-color: #fff;
   border: 1px solid #ccc;
@@ -190,9 +151,8 @@ label {
   justify-content: space-between;
   align-items: center;
 }
-
 .guardar-campaña-button {
-  background-color: #28a745;
+  background-color: #28A745;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -201,18 +161,15 @@ label {
   transition: background-color 0.3s;
   margin-top: 10px;
 }
-
 .guardar-campaña-button:hover {
-  background-color: #1e7e34;
+  background-color: #1E7E34;
 }
-
-
 .campaña-guardada {
-  background-color: #28a745;
+  background-color: #28A745;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
   margin-top: 10px;
 }
-/* aqui termina la perzonalizacion del carrito*/
+
