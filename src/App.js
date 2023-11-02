@@ -10,12 +10,12 @@ import PaginaDonaciones from './components/pagina-donaciones/pagina-donaciones';
 import PaginaPerfil from './components/pagina-perfil/pagina-perfil'; 
 import Navbar from './components/Navbar/Navbar';
 import Perfil from './components/Perfil/Perfil'
-import React from "react";
 import TarjetaG from "./components/Tarjeta-grande/Tarjeta-grande";
 function App() {
     return (
         <div>
           <BrowserRouter>
+          <Navbar/>
             <Routes>
               <Route path='/' element={<PaginaInicio/>}></Route>
               <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
@@ -26,13 +26,6 @@ function App() {
           </BrowserRouter>
         </div>
     );
-  return (
-    <div>
-
-  
-    
-    </div>
-  );
 }
 
 export default App;

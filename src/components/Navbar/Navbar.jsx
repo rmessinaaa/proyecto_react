@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopNav } from "./data/navbars";
-import {Navigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
   const [navItems, setNavItems] = useState([]);
