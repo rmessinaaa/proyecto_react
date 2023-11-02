@@ -1,11 +1,10 @@
 import React from 'react';
-import VerticalCards from './components/Tarjeta-pagina-terciaria/Tarjeta-pagina-terciaria';
+import './App.css';
 
 function App() {
   return (
     <div>
-      <h1>Tarjetas</h1>
-      <VerticalCards />
+
     </div>
   );
 }

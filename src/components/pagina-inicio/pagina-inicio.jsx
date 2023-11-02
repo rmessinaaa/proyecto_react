@@ -3,6 +3,7 @@ import Buscador from '../Buscador/Buscador';
 import SubsHomeTusDonaciones from '../subs-home-tus-donaciones/subs-home-tus-donaciones';
 import SubsHomeNosotros from '../subs-home-nosotros/subs-home-nosotros';
 import SubsHomePerfil from '../subs-home-perfil/subs-home-perfil';
+import SubsHomeCampañas from '../subs-home-campañas/subs-home-campañas';
 
 function PaginaInicio() {
     return (
@@ -13,6 +14,7 @@ function PaginaInicio() {
                 </div>
             </div>
             <Buscador />
+            <SubsHomeCampañas />
             <SubsHomeTusDonaciones />
             <SubsHomeNosotros />
             <SubsHomePerfil />
