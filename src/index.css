@@ -11,3 +11,143 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+/* Navbar */
+
+.nav__wrapper {
+  background: #00293A
+  ;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+
+  
+.nav__brand {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ddd;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.nav__link {
+  color: #ddd;
+}
+
+.toggler__icon {
+  cursor: pointer;
+  display: none;
+}
+
+.toggler__icon div {
+  width: 25px;
+  height: 2px;
+  background: #ddd;
+  margin: 5px 0px;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .toggler__icon {
+    display: block;
+  }
+  .nav__menu {
+    position: fixed;
+    background: #00293A
+    ;
+    flex-direction: column;
+    top: 10vh;
+    width: 50%;
+    height: 90vh;
+    right: 0;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+  }
+}
+
+.nav__collapse {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+.toggle .line__1 {
+  transform: translate(-5px, 7px) rotate(-45deg);
+}
+.toggle .line__2 {
+  opacity: 0;
+}
+.toggle .line__3 {
+  transform: translate(-5px, -7px) rotate(45deg);
+}
+
+/* Background Image */
+
+.hero {
+  height: 90vh;
+  background: white;
+  background-size: cover;
+}
+
+footer {
+  background: #00293A;
+  color: #00293A;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 150px; /* Ajusta el tamaño de tu logotipo */
+  height: auto;
+}
+
+.footer-text {
+  font-size: 10px;
+  font-weight: 500;
+  color: white;
+  text-align:right
+  
+
+}
+
+/* Estilos para los enlaces del navbar */
+.nav__link {
+  color: #ddd;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Ajusta el grosor de la línea según tus preferencias */
+  background-color: #ddd; /* Color de la línea */
+  transform: scaleX(0); /* Inicialmente, la línea no se muestra */
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav__link:hover::after {
+  transform: scaleX(1); /* Cuando se pasa el mouse por encima, la línea se muestra */
+}
