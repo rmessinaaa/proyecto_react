@@ -10,7 +10,7 @@ function SubsNosotrosHistoria(){
                 </div>
                 <div className="row align-items-center justify-content-center">
                     <div className="col-md-6 text-center">
-                        <img src="ilustraciones/home-nosotros.svg" alt="Nosotros" className="img-fluid" />  
+                        <img src="ilustraciones/home-nosotros.svg" alt="Nosotros" />  
                     </div>
                     <div className="col-md-6 text-center">
                         <p className="parrafo-celeste">En septiembre de 2023, nació Sinergia como respuesta a un desafío global urgente: <strong>la lucha contra la pobreza</strong>, un objetivo plasmado en el ODS 1 de la ONU.</p>

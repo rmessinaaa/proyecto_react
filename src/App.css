@@ -101,3 +101,11 @@ body{
     transform: rotate(360deg);
   }
 }
+
+/* PARA CENTRAR CONTENIDO EN CONTENEDORES*/
+
+.centrar-contenido{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,7 +14,7 @@ function SubsHomeNosotros(){
                         <button type="button" className="button-azul">Conoce más</button>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src="ilustraciones/home-nosotros.svg" alt="Nosotros" className="img-fluid" />
+                        <img src="ilustraciones/home-nosotros.svg" alt="Nosotros" />
                     </div>
                 </div>
             </div>
