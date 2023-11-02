@@ -19,7 +19,7 @@ function App() {
             <Routes>
               <Route path='/' element={<PaginaInicio/>}></Route>
               <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
-              <Route path='/buscador' element={<PaginaBuscador/>}></Route>
+              <Route path='/buscar' element={<PaginaBuscador/>}></Route>
               <Route path='/donaciones' element={<PaginaDonaciones/>}></Route>
               <Route path='/perfil' element={<PaginaPerfil/>}></Route>
             </Routes>
