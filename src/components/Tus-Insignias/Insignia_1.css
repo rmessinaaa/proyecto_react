@@ -1,0 +1,23 @@
+.alert{
+    width: 350px;
+    background-color: #0597f2;
+    border-radius: 50px;
+    color: white;
+    background-image: url(Insignia_1.svg);
+    background-repeat: no-repeat;
+    background-size: 50px;
+   background-position: 2.5%;
+   padding-left: 60px;
+   transition: all 0.3s;
+   margin: auto;
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+
+.alert:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 5px #1ed9d9;
+}
+
+
+

@@ -104,28 +104,38 @@ code {
 
 footer {
   background: #00293A;
-  color: #00293A;
+  color: white;
   padding: 20px 0;
+  text-align: left;
+  justify-content: space-between;
 }
 
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #00293A;
+  color: white;
+  padding: 20px 0;
+  text-align: left;
 }
 
-.footer-logo img {
-  width: 150px; /* Ajusta el tamaño de tu logotipo */
-  height: auto;
+/* Estilos para el contenedor de la imagen */
+.image-container {
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
 
-.footer-text {
-  font-size: 10px;
+/* Estilos para la imagen del logotipo */
+.image-container img {
+  max-height: 40px;
+}
+
+/* Estilos para el contenedor del texto */
+.text-container p {
+  font-size: 12px;
   font-weight: 500;
   color: white;
-  text-align:right
-  
-
+  text-align: right;
 }
 
 /* Estilos para los enlaces del navbar */
@@ -151,3 +161,4 @@ footer {
 .nav__link:hover::after {
   transform: scaleX(1); /* Cuando se pasa el mouse por encima, la línea se muestra */
 }
+
