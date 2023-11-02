@@ -36,7 +36,9 @@ body{
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #0f3240;
-  text-align: center
+  text-align: center;
+  padding-bottom: 50px;
+  
 }
 
 .titulo-secundario-blanco{
@@ -103,4 +105,14 @@ body{
 }
 a {
   color: white;
+}
+
+.donaciones{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #0f3240;
+  font-size: 3em;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
