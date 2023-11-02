@@ -9,7 +9,8 @@
 .buscador-p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: #0f3240
+    color: #0f3240;
+    text-align: center;
 }
 
 .barra-busqueda{
@@ -23,7 +24,9 @@
    background-position: 2.3%;
    padding-left: 40px;
    outline: #1ed9d9;
-   
+   align-items: center;
 }
-
-
+   
+form{
+    align-items: center;
+}

@@ -14,16 +14,6 @@ const VerticalCards = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-12">
-          <div className="card" style={{ width: '15rem' }}>
-            <img src="imagenes-campaña/sinergiafoto.png" className="card-img-top" alt="Card 2" />
-            <div className="card-body">
-              <h5 className="card-title">Campaña 2</h5>
-              <p className="card-text">Descripción de la Tarjeta 2</p>
-              <a href="#" className="btn btn-primary">Ver más</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
