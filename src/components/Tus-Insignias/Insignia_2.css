@@ -9,12 +9,11 @@
    background-position: 5%;
    padding-left: 60px;
    transition: all 0.3s;
-   margin: auto;
-   margin-top: 30px;
-   margin-bottom: 30px;
+   
+   
    padding-top: 11px;
-   padding-left: 100px;
-   height: 50px;
+   padding-right: 40px;
+   height: 50px;  
 }
 
 .alert-2:hover{

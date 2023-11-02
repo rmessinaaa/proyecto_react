@@ -6,7 +6,7 @@ function Insignia_uno() {
     return(
         
             <div className="container-fluid">
-                    <div className="alert" role="alert">
+                    <div className="alert-1" role="alert">
                             Felicidades por tu primera donación
                     </div>
             </div>
