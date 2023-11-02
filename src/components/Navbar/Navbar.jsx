@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTopNav } from "./components/Navbar/data/navbars";
+import { getTopNav } from "./data/navbars";
 import {Navigate} from "react-router-dom";
 
 const Navbar = () => {
