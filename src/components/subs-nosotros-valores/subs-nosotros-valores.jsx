@@ -10,7 +10,7 @@ function SubsNosotrosValores(){
                 </div>
                 <div className="row align-items-center justify-content-center">
                     <div className="col-md-6 text-center">
-                        <img src="ilustraciones/home-tus-donaciones-2.svg" alt="Nosotros" className="img-fluid" />  
+                        <img src="ilustraciones/home-tus-donaciones-2.svg" alt="Nosotros" />  
                     </div>
                     <div className="col-md-6 text-center">
                         <p className="parrafo-celeste">En Sinergia, nos guían valores sólidos que reflejan nuestra dedicación a la causa de la superación de la pobreza. Estos valores incluyen <strong>la transparencia, la colaboración, la inclusión y la igualdad</strong>.</p>

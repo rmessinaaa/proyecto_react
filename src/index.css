@@ -152,13 +152,25 @@ footer {
   left: 0;
   width: 100%;
   height: 2px; /* Ajusta el grosor de la línea según tus preferencias */
-  background-color: #ddd; /* Color de la línea */
+  background-color: #dddddd; /* Color de la línea */
   transform: scaleX(0); /* Inicialmente, la línea no se muestra */
   transform-origin: left;
   transition: transform 0.3s ease;
+  
 }
 
 .nav__link:hover::after {
   transform: scaleX(1); /* Cuando se pasa el mouse por encima, la línea se muestra */
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(228, 228, 228); /* Establece el color para los enlaces cuando el mouse está sobre ellos */
+}
+
+a:visited {
+  color: #ffffff; /* Establece el color para los enlaces visitados */
+}

@@ -11,6 +11,7 @@ import PaginaPerfil from './components/pagina-perfil/pagina-perfil';
 import Navbar from './components/Navbar/Navbar';
 import Perfil from './components/Perfil/Perfil'
 import TarjetaG from "./components/Tarjeta-grande/Tarjeta-grande";
+import Footer from "./components/Footer/Footer"
 function App() {
     return (
         <div>
@@ -19,10 +20,11 @@ function App() {
             <Routes>
               <Route path='/' element={<PaginaInicio/>}></Route>
               <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
-              <Route path='/buscador' element={<PaginaBuscador/>}></Route>
+              <Route path='/buscar' element={<PaginaBuscador/>}></Route>
               <Route path='/donaciones' element={<PaginaDonaciones/>}></Route>
               <Route path='/perfil' element={<PaginaPerfil/>}></Route>
             </Routes>
+            <Footer/>
           </BrowserRouter>
         </div>
     );

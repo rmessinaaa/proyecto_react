@@ -14,7 +14,7 @@ function SubsNosotrosMision(){
                         <p className="parrafo-blanco">Queremos ser un <strong>vínculo esencial</strong> entre las instituciones que trabajan incansablemente para superar la pobreza y las millones de personas dispuestas a ayudar. A través de una plataforma digital, Sinergia se esfuerza por conectar las intenciones con acciones tangibles, generando un impacto real y forjando una comunidad apasionada en la lucha contra la pobreza.</p>
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src="ilustraciones/home-perfil.svg" alt="Tu perfil" className="img-fluid" />
+                        <img src="ilustraciones/home-perfil.svg" alt="Tu perfil" />
                     </div>
                 </div>
             </div>
