@@ -5,3 +5,4 @@ function PaginaDonaciones(){
         <h1>Donaciones</h1>
     )
 }
+export default PaginaDonaciones;
