@@ -13,12 +13,12 @@ function Infopersonal () {
         <h1 className="titulo">Información Personal</h1>
         <h7 className="subtitulo">Nombre de Usuario</h7>
         <form>
-            <input className="entrada" type="text" readOnly defaultValue={"Renato"}></input>
+            <input className="entrada" type="text" readOnly defaultValue={" Campaña_vida"}></input>
             <button className="boton">Editar</button>
         </form>
         <h7 className="subtitulo">Mail</h7>
         <form>
-            <input className="entrada" type="text" readOnly defaultValue={"Renato"}></input>
+            <input className="entrada" type="text" readOnly defaultValue={"campañavida@gmail.cl"}></input>
             <button className="boton">Editar</button>
         </form>
         <h7 className="subtitulo">Fecha de Nacimiento</h7>

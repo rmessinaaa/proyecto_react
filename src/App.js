@@ -10,7 +10,6 @@ import PaginaDonaciones from './components/pagina-donaciones/pagina-donaciones';
 import PaginaPerfil from './components/pagina-perfil/pagina-perfil'; 
 import Navbar from './components/Navbar/Navbar';
 import Perfil from './components/Perfil/Perfil'
-import TarjetaG from "./components/Tarjeta-grande/Tarjeta-grande";
 import Footer from "./components/Footer/Footer"
 function App() {
     return (
