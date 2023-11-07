@@ -9,9 +9,8 @@ import PaginaBuscador from './components/pagina-buscador/PaginaBuscador'
 import PaginaDonaciones from './components/pagina-donaciones/pagina-donaciones'; 
 import PaginaPerfil from './components/pagina-perfil/pagina-perfil'; 
 import Navbar from './components/Navbar/Navbar';
-import Perfil from './components/Perfil/Perfil'
-import Footer from "./components/Footer/Footer"
-import PaginaCampaña from './components/pagina-campaña/pagina-campaña';
+import Perfil from './components/Perfil/Perfil';
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -23,7 +22,7 @@ function App() {
               <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
               <Route path='/buscar' element={<PaginaBuscador/>}></Route>
               <Route path='/donaciones' element={<PaginaDonaciones/>}></Route>
-              <Route path='/perfil' element={<PaginaCampaña/>}></Route>
+              <Route path='/perfil' element={<PaginaPerfil/>}></Route>
             </Routes>
             <Footer/>
           </BrowserRouter>
