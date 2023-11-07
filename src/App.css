@@ -211,3 +211,35 @@ label {
   transform: scale(1.05);
 }
 
+/* Estilo foto de campaña */
+
+.foto-campaña{
+  border-radius: 50px;
+  margin: 2em;
+  width: 80%;
+  transition: transform 0.3s;
+}
+
+.foto-campaña:hover {
+  transform: scale(1.05);
+}
+
+/*Estilo meta y cómputo */
+
+.meta-computo-container{
+  padding: 2em;
+  transition: transform 0.3s;
+}
+
+.meta-computo-container:hover{
+  transform: scale(1.05);
+}
+
+.meta-computo-title{
+  font-size: 1.3em;
+}
+
+.meta-computo-value{
+  font-weight: 700;
+  color: #0597F2
+}
