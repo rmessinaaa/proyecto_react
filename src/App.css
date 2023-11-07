@@ -243,3 +243,9 @@ label {
   font-weight: 700;
   color: #0597F2
 }
+
+/* carousel.css */
+.carousel-image {
+  max-width: 10; /* Adjust the maximum width as needed */
+  max-height: 200px; /* Adjust the maximum height as needed */
+}
