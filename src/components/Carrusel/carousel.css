@@ -1,0 +1,26 @@
+/* carousel.css */
+.carousel-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+  }
+
+  .carousel-item img {
+    max-width: 400%; /* Ajusta el ancho máximo según tus necesidades */
+    max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+    object-fit: cover; /* Escalar la imagen para ajustar a las dimensiones */
+  }
+
+  .carousel-caption h5 {
+    color: #fff7f7; /* Cambia "#FF0000" al color que desees */
+  }
+  
+  .carousel-caption p {
+    color: #faf0f0; /* Cambia "#00FF00" al color que desees */
+  }
+
+  .custom-carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6); /* Color de fondo con transparencia */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
+    border-radius: 5px; /* Ajusta el radio de borde según tus preferencias */
+  }
