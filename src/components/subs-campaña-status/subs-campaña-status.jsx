@@ -15,7 +15,7 @@ function SubsCampañaStatus () {
                         <Computo />
                     </div>
                     <div className="col-md-6 text-center">
-                        <img src="/ilustraciones/campanas-guardadas.svg" alt="status" />
+                        <img src="/ilustraciones/campanas-guardadas.svg" alt="status" className="control-ilustraciones" />
                     </div>
                 </div>
             </div>

@@ -7,9 +7,9 @@ function TituloDonacion() {
   const tituloStyle = {
     color: 'white', 
     textAlign: 'center',
-    marginTop: '4rem', 
+    marginTop: '2.5rem', 
   };
-  return <h2 style={tituloStyle}>Título de la Donación</h2>;
+  return <h2 style={tituloStyle}>Haz tu donación</h2>;
 }
 // Componente para el campo de monto de donación
 function MontoDonacion() {
@@ -74,8 +74,7 @@ function DescripcionDonacion() {
   return (
     <div className="col-md-6" style={containerStyle}>
       <p className="my-4" style={paragraphStyle}>
-        Este es el párrafo descriptivo de la donación. Puedes agregar aquí
-        información sobre la causa o el proyecto al que se donará.
+        Realiza tu donación a través del sistema Webpay de forma rápida y segura.
       </p>
       <div className="text-center my-4">
         <button className="btn btn-primary" style={buttonStyle}>
@@ -93,8 +92,8 @@ function TarjetaDonacion() {
   };
 
   return (
-    <div className="container">
-      <div className="card border rounded w-50 bg-custom mt-3" style={cardStyle}>
+    <div className="container centrar-contenido">
+      <div className="card border-rounded w-50 bg-custom mt-3 " style={cardStyle}>
         <TituloDonacion />
         <MontoDonacion />
         <div className="row">

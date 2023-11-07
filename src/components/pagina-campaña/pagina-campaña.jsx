@@ -1,6 +1,7 @@
 import React from 'react';
 import SubsCampañaDescripcion from '../subs-campaña-descripcion/subs-campaña-descripcion';
 import SubsCampañaStatus from '../subs-campaña-status/subs-campaña-status';
+import SubsCampañaDonar from '../subs-campaña-donar/subs-campaña-donar';
 
 function PaginaCampaña () {
     return(
@@ -12,6 +13,7 @@ function PaginaCampaña () {
             </div>
             <SubsCampañaDescripcion/>
             <SubsCampañaStatus />
+            <SubsCampañaDonar />
         </div>
     );
 };
