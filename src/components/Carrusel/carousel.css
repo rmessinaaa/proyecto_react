@@ -24,3 +24,7 @@
     padding: 20px; /* Ajusta el espaciado interior según tus preferencias */
     border-radius: 5px; /* Ajusta el radio de borde según tus preferencias */
   }
+
+  .content-below-navbar {
+    margin-top: 70px; /* O ajusta según sea necesario */
+  }
