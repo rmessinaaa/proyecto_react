@@ -1,5 +1,6 @@
 import React from 'react';
 import "./subs-home-perfil.css";
+import { Link } from "react-router-dom";
 
 function SubsHomePerfil(){
     return(
@@ -14,7 +15,7 @@ function SubsHomePerfil(){
                     </div>
                     <div className="col-md-6 text-center">
                         <p className="parrafo-blanco">Ajusta y edita tu información personal, revisa y modifica la fotografía con que te das a conocer y añade o elimina categorías de tu interés.</p>
-                        <button type="button" className="button-azul">Ir a tu perfil</button>   
+                        <Link to="/perfil" type="button" className="button-azul">Ir a tu perfil</Link>  
                     </div>
                 </div>
             </div>
