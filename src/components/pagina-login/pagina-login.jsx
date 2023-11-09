@@ -1,12 +1,12 @@
-import React from "react";
-import RegistrationForm from '../Inicio-sesion/Inicio-sesion';
+import React from 'react';
+import IniciarSesion from '../Iniciar-sesión/Iniciar-sesión';
 
-function PaginaRegistro () {
-    return (
+function PaginaLogin () {
+    return(
         <div className='bg-paginas'>
             <div className="">
                 <div className='container container-blanco '>
-                    <div className="row">
+                <div className="row">
                         <div className="col"></div>
                         <div className="col">
                             <img src="./logos/sinergia-imagotipo-oscuro copia 2.svg" />
@@ -14,7 +14,7 @@ function PaginaRegistro () {
                         <div className="col"></div>
                     </div>
                     <div className="acomodar-registro-login ">
-                        <RegistrationForm />
+                        <IniciarSesion />
                     </div>
                 </div>
             </div>
@@ -22,4 +22,4 @@ function PaginaRegistro () {
     )
 }
 
-export default PaginaRegistro;
+export default PaginaLogin;

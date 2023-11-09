@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import { Link } from "react-router-dom";
 
 function RegistrationForm() {
   return (
@@ -12,7 +13,8 @@ function RegistrationForm() {
             <br />
             Inicia sesión con tus datos
           </p>
-          <input type="button" value="Iniciar Sesión" id="sign-in" />
+          {/* <input type="button" value="Iniciar Sesión" id="sign-in" /> */}
+          <Link to="/login" className="boton-nicole-login"id="sign-in">Iniciar sesión</Link>
         </div>
       </div>
       <div className="form-information">

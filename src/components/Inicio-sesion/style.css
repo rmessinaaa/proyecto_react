@@ -35,25 +35,6 @@
   color: white;
 }
 
-.info-childs input {
-  background-color: white;
-  outline: none;
-  border: solid 2px white;
-  border-radius: 20px;
-  padding: 10px 20px;
-  color: #00293A;
-
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.info-childs input:hover {
-  background-color: #00293A;
-  border: none;
-  color: white;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-}
-
 .form-information {
   display: flex;
   align-items: center;
@@ -153,4 +134,23 @@
   padding: 20px;
   border-bottom-left-radius: 20px;
   border-top-right-radius: 0px;
+}
+
+.boton-nicole-login{
+  background-color: #00293A;
+  outline: none;
+  border: solid 2px #f2f2f2;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #00293A;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-nicole-login:hover {
+  background-color: #f2f2f2;
+  border: solid 2px #00293A;
+  color: #00293A;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
 }

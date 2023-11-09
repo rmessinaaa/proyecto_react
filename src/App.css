@@ -255,3 +255,10 @@ label {
   padding: 3em;
 }
 
+.acomodar-registro-login{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}

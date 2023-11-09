@@ -1,5 +1,6 @@
 import React from 'react'
 import './Iniciar-sesion.css'
+import { Link } from "react-router-dom";
 
 
 function IniciarSesion(){
@@ -7,9 +8,7 @@ function IniciarSesion(){
         
     <div className='container-fluid'>
 
-        <div className='container-fluid div-unico'>   
-
-            <div className='container-fluid div-linea'>
+        
 
                 <div className="container-fluid div-uno">
                     <h1 className='titulos-principales'>Inicia sesión en Sinergia</h1>
@@ -42,7 +41,8 @@ function IniciarSesion(){
                 </div> 
 
                 <div className='container-fluid div-cuatro'>
-                    <button className='dos-botones'>Siguiente</button>
+                    <Link to="/" className='dos-botones' id="sign-in">Siguiente</Link>
+                    {/* <button className='dos-botones'>Siguiente</button> */}
                 </div>
 
                 <div className='container-fluid div-cinco'>
@@ -51,9 +51,7 @@ function IniciarSesion(){
 
                 
 
-            </div>
 
-        </div>
 
     </div>
         
