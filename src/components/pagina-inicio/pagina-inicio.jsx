@@ -4,8 +4,7 @@ import SubsHomeTusDonaciones from '../subs-home-tus-donaciones/subs-home-tus-don
 import SubsHomeNosotros from '../subs-home-nosotros/subs-home-nosotros';
 import SubsHomePerfil from '../subs-home-perfil/subs-home-perfil';
 import SubsHomeCampañas from '../subs-home-campañas/subs-home-campañas';
-import Carrusel from "../Carrusel/Carrusel"; 
-import Iniciosesion from "../Inicio-sesion/Inicio-sesion"
+import Carrusel from "../Carrusel/Carrusel";
 function PaginaInicio() {
     return (
         <div className='bg-paginas'>
@@ -22,7 +21,6 @@ function PaginaInicio() {
             <SubsHomeTusDonaciones />
             <SubsHomeNosotros />
             <SubsHomePerfil />
-            <Iniciosesion />
         </div>
     )
 }
