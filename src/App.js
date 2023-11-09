@@ -11,6 +11,7 @@ import PaginaPerfil from './components/pagina-perfil/pagina-perfil';
 import Navbar from './components/Navbar/Navbar';
 import Perfil from './components/Perfil/Perfil'
 import Footer from "./components/Footer/Footer"
+
 function App() {
     return (
         <div>
