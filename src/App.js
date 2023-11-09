@@ -12,12 +12,16 @@ import Navbar from './components/Navbar/Navbar';
 import Footer from "./components/Footer/Footer";
 import Perfil from './components/Perfil/Perfil';
 import PaginaCampaña from './components/pagina-campaña/pagina-campaña';
+import PaginaRegistro from './components/pagina-registro/pagina-registro';
 
 
 function App() {
     return (
         <div>
           <BrowserRouter>
+          <Routes>
+            <Route path='/registro' element={<PaginaRegistro />} />
+          </Routes>
           <Navbar/>
             <Routes>
               <Route path='/' element={<PaginaInicio/>}></Route>
