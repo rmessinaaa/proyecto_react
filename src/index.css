@@ -27,6 +27,7 @@ code {
   align-items: center;
   justify-content: space-between;
   height: 12vh;
+  z-index: 1000;
 }
 
 
@@ -36,6 +37,7 @@ code {
   font-weight: 700;
   color: #ddd;
   padding: 15px;
+  z-index: 1000;
 }
 
 .nav__menu {
@@ -43,6 +45,7 @@ code {
   align-items: center;
   justify-content: space-around;
   gap: 3rem;
+  z-index: 1000;
 }
 
 .nav__link {

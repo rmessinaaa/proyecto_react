@@ -188,13 +188,13 @@ label {
 /* estilo tarjeta */
 
 .card {
-  border: 1px solid #000;
+
   transition: transform 0.3s;
 }
 
 .btn-primary {
-  background-color: #007BFF;
-  color: #fff;
+  background-color: #0F3240;
+  color: #f2f2f2;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   padding: 10px 20px;
@@ -209,5 +209,49 @@ label {
 
 .card:hover {
   transform: scale(1.05);
+}
+
+/* Estilo foto de campaña */
+
+.foto-campaña{
+  border-radius: 50px;
+  margin: 2em;
+  width: 80%;
+  transition: transform 0.3s;
+}
+
+.foto-campaña:hover {
+  transform: scale(1.05);
+}
+
+/*Estilo meta y cómputo */
+
+.meta-computo-container{
+  padding: 2em;
+  transition: transform 0.3s;
+}
+
+.meta-computo-container:hover{
+  transform: scale(1.05);
+}
+
+.meta-computo-title{
+  font-size: 1.3em;
+}
+
+.meta-computo-value{
+  font-weight: 700;
+  color: #0597F2
+}
+
+/* carousel.css */
+.carousel-image {
+  max-width: 10; /* Adjust the maximum width as needed */
+  max-height: 200px; /* Adjust the maximum height as needed */
+}
+
+/* Control de parámetros para ilustraciones */
+.control-ilustraciones {
+  padding: 3em;
 }
 

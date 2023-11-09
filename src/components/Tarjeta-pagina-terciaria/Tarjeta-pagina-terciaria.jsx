@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const VerticalCards = () => {
   return (
@@ -11,7 +12,7 @@ const VerticalCards = () => {
             <div className="card-body">
               <h5 className="card-title">Campaña 1</h5>
               <p className="card-text">Descripción de la Tarjeta 1</p>
-              <a href="#" className="btn btn-primary">Ver más</a>
+              <Link to="/ficha-campaña" className="btn btn-primary">Ver más</Link>
             </div>
           </div>
         </div>

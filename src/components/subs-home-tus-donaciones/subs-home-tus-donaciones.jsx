@@ -1,5 +1,6 @@
 import React from 'react';
 import "./subs-home-tus-donaciones.css";
+import { Link } from "react-router-dom";
 
 function SubsHomeTusDonaciones(){
     return(
@@ -14,7 +15,7 @@ function SubsHomeTusDonaciones(){
                     </div>
                     <div className="col-md-6 text-center">
                         <p className="parrafo-blanco">Revisa las campañas en las que tienes donaciones por realizar, mira el historial de tus donaciones y las insignias que has obtenido... Y por supuesto, ¡motívate a donar!</p>
-                        <button type="button" className="button-azul">Ir a tus donaciones</button>   
+                        <Link to="/donaciones" type="button" className="button-azul">Ir a tus donaciones</Link>  
                     </div>
                 </div>
             </div>
