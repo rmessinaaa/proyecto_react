@@ -78,7 +78,7 @@ function DescripcionDonacion() {
       </p>
       <div className="text-center my-4">
         <button className="btn btn-primary" style={buttonStyle}>
-         DONACIÓN AQUÍ
+         DONAR
         </button>
       </div>
     </div>
