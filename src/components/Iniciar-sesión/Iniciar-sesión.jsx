@@ -6,10 +6,14 @@ import { Link } from "react-router-dom";
 function IniciarSesion(){
     return(
         
-    <div className='container-fluid'>
+    <div className='row'>
 
         
+            <div className='col-1'>
 
+            </div>
+
+            <div className='col-10 inicio'>
                 <div className="container-fluid div-uno">
                     <h1 className='titulos-principales'>Inicia sesión en Sinergia</h1>
                 </div>
@@ -48,7 +52,11 @@ function IniciarSesion(){
                 <div className='container-fluid div-cinco'>
                     <button className='dos-botones'>¿Olvidaste tu contraseña?</button>
                 </div>
+            </div>
 
+            <div className='col-1'>
+
+            </div>
                 
 
 
