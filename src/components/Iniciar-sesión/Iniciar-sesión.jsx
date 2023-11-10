@@ -14,9 +14,12 @@ function IniciarSesion(){
             </div>
 
             <div className='col-10 inicio'>
+                <div className='row azul'>
                 <div className="container-fluid div-uno">
                     <h1 className='titulos-principales'>Inicia sesión en Sinergia</h1>
                 </div>
+                </div>
+                
             
                 <div className='container-fluid div-dos'>
                     <button className='boton-g'>Iniciar sesión con Google</button>
