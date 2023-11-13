@@ -32,8 +32,16 @@ function RegistrationForm() {
             <label>
               <input type="password" placeholder="Contraseña" />
             </label>
+
+                <select id="seleccionaRol" name="rol" required>
+                  <option value="" disabled selected>Selecciona tu rol</option>
+                  <option value="persona">Persona</option>
+                  <option value="institucion">Institución</option>
+                </select><br/>
+
             <input type="submit" value="Registrarse" />
           </form>
+          
         </div>
       </div>
     </div>
