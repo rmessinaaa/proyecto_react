@@ -175,3 +175,14 @@ a:hover {
 a:visited {
   color: #ffffff; /* Establece el color para los enlaces visitados */
 }
+
+.nav__link--logout {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #0000FF;
+  font-weight: normal; /* Peso de fuente normal en el estado normal */
+  display: inline-block;
+  text-decoration: none;
+  }
+ 
