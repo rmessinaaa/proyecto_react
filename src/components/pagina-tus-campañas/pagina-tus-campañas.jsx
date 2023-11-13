@@ -1,5 +1,6 @@
 import React from 'react';
 import VistaCampañas from '../vista-campañas/vista-campañas';
+import { Link } from "react-router-dom";
 
 
 function Pagina_Tus_Campañas() {
@@ -17,7 +18,7 @@ function Pagina_Tus_Campañas() {
                 </div>
             
                 <div className='col-3'>
-                    <button className='button-azul' onclick="mostrarPopup()">Crear nueva campaña</button>
+                    <Link to="/crear-campaña" className='button-azul'>Crear nueva campaña</Link>
                 </div>
 
                 <div className='col-2'>
