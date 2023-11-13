@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function RegistrationForm() {
   
+  const navigate = useNavigate();
   //Para inicializar y manejar los estados de los campos
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -33,9 +35,10 @@ function RegistrationForm() {
 
     if (response.ok) {
       // Manejar respuesta exitosa
-      console.log('Registro exitoso');
+      navigate('/');
     } else {
       // Manejar errores
+      alert("Error en el registro");
       console.error('Error en el registro');
     }
   } catch (error) {
