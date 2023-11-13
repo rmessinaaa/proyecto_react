@@ -288,3 +288,22 @@ label {
 .cruz:hover {
   transform: scale(1.1);
 }
+.custom-dropdown {
+  /* Personaliza el fondo del Dropdown */
+  background-color: #3498db; /* Puedes cambiar este color según tus preferencias */
+}
+
+/* Personaliza el color del texto del Dropdown */
+.custom-dropdown .btn-secondary {
+  color: #fff; /* Cambia el color del texto del Dropdown según tus preferencias */
+}
+
+/* Personaliza el color del texto de los enlaces dentro del Dropdown */
+.custom-dropdown .dropdown-item {
+  color: #333; /* Cambia el color del texto de los enlaces según tus preferencias */
+}
+
+/* Cambia el color del fondo de los enlaces al pasar el ratón sobre ellos */
+.custom-dropdown .dropdown-item:hover {
+  background-color: black; /* Puedes cambiar este color según tus preferencias */
+}
