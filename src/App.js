@@ -12,7 +12,7 @@ import Footer from "./components/Footer/Footer";
 import PaginaCampaña from './components/pagina-campaña/pagina-campaña';
 import PaginaRegistro from './components/pagina-registro/pagina-registro';
 import PaginaLogin from './components/pagina-login/pagina-login';
-
+import Pagina_Tus_Campañas from './components/pagina-tus-campañas/pagina-tus-campañas';
 
 function Main() {
   const location = useLocation();
@@ -31,6 +31,7 @@ function Main() {
             <Route path='/ficha-campaña' element={<PaginaCampaña />} />
             <Route path='/registro' element={<PaginaRegistro />} />
             <Route path='/login' element={<PaginaLogin />} />
+            <Route path='/tus-campañas' element={<Pagina_Tus_Campañas/>}/>
           </Routes>
           {hideForRegistro && hideForLogin && <Footer/>}
       </div>
