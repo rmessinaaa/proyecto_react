@@ -79,7 +79,7 @@ function RegistrationForm() {
                 <select id="seleccionaRol" name="rol" required value={rol} onChange={(e) => setRol(e.target.value)}>
                   <option value="" disabled selected>Selecciona tu rol</option>
                   <option value="donante">Persona</option>
-                  <option value="institucion">Institución</option>
+                  <option value="institución">Institución</option>
                 </select><br/>
 
             <input type="submit" value="Registrarse" />
