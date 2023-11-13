@@ -15,7 +15,6 @@ function PaginaInicio() {
                     <h1 className='titulos-principales'>Inicio</h1>
                 </div>
             </div>
-            
             <Buscador />
             <SubsHomeCampañas />
             <SubsHomeTusDonaciones />
