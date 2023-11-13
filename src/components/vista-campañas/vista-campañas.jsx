@@ -26,10 +26,15 @@ function VistaCampañas() {
                                 style={{cursor: 'pointer',
                                 transform: 'scale(0.15)',}}
                             />
+                            
                         </div>
+                        
                     </div>
+                    
                 </div>
+                
             </div>
+            
         </div>
     )
 }
