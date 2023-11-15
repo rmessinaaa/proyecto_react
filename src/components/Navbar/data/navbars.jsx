@@ -8,7 +8,7 @@ const Donaciones = <NavLink to="/donaciones">Donaciones</NavLink>;
 const Nosotros = <NavLink to="/nosotros">Nosotros</NavLink>;
 const Perfil = <NavLink to="/perfil">Perfil</NavLink>;
 const CerrarSesion = (
-  <NavLink to="/cerrar-sesion" className="nav__link--logout">
+  <NavLink to="/registro" className="nav__link--logout">
     Cerrar sesión
   </NavLink>
 );
@@ -21,10 +21,10 @@ const DropdownLinks = (
 
     <Dropdown.Menu className="custom-dropdown-menu">
     <Dropdown.Item>
-  <NavLink to="/cerrar-sesion" className="nav__link">
+  <NavLink to="/tus-campañas" className="nav__link">
     Tus campañas
   </NavLink>  
-</Dropdown.Item>      <Dropdown.Item><NavLink to="/cerrar-sesion" className="nav__link">
+</Dropdown.Item>      <Dropdown.Item><NavLink to="/crear-campaña" className="nav__link">
     Crear campaña
   </NavLink>  </Dropdown.Item>
     </Dropdown.Menu>
