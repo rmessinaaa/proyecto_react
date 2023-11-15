@@ -17,12 +17,7 @@ function IniciarSesion(){
             <div className='col-10 inicio'>
                 <div className='row azul'>
                 <div className="container-fluid div-uno">
-                    <h2> Inicia sesión en Sinergia</h2>
-                    <p>
-            Únete a nuestra causa y haz la diferencia
-            <br />
-            Inicia sesión con tus datos
-          </p>
+                    <h1 className='titulos-principales'>Inicia sesión en Sinergia</h1>
                 </div>
                 </div>
                 
