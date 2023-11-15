@@ -154,3 +154,17 @@
   color: #00293A;
   box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
 }
+
+#seleccionaRol{
+  background-color: #F2F2F2;
+  color: #00293A;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+  margin-bottom: 25px ;
+  outline: none;
+  width: 100%;
+}
