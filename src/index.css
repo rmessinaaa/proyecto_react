@@ -185,4 +185,29 @@ a:visited {
   display: inline-block;
   text-decoration: none;
   }
- 
+ /* Estilos para el menú desplegable personalizado */
+.custom-dropdown-menu {
+  background-color: #00293A;
+  color: #fff;
+}
+
+/* Estilos para los elementos del menú desplegable */
+.custom-dropdown-menu .dropdown-item {
+  color: #fff; /* Color del texto por defecto (blanco) */
+}
+
+/* Establece el color del texto a azul para los elementos a dentro de dropdown-item */
+.custom-dropdown-menu .dropdown-item a {
+  color:#00293A/* Azul */
+}
+
+/* Estilos para los elementos del menú desplegable al pasar el ratón sobre ellos */
+.custom-dropdown-menu .dropdown-item:hover {
+  background-color: transparent;
+  color: #00293A;
+}
+
+/* Establece el color del texto a azul para los elementos a dentro de dropdown-item al pasar el ratón sobre ellos */
+.custom-dropdown-menu .dropdown-item:hover a {
+  color: #007bff; /* Azul */
+}

@@ -1,0 +1,20 @@
+.bg-registro {
+    /* Estilos para el fondo de páginas en general */
+    background-image: url("../../../public/ilustraciones/12244.jpg"); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;  /* Ajusta según tus necesidades */
+    /* Otros estilos según sea necesario */
+  }
+  
+  
+  .logo-overlay {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo con opacidad */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #0F3240; /* Color del texto */
+    font-size: 18px; /* Tamaño del texto */
+    border-radius: 15px; /* Bordes redondeados de 15 píxeles */
+  }

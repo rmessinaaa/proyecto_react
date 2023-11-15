@@ -57,7 +57,7 @@ function RegistrationForm() {
             Inicia sesión con tus datos
           </p>
           {/* <input type="button" value="Iniciar Sesión" id="sign-in" /> */}
-          <Link to="/login" className="boton-nicole-login"id="sign-in">Iniciar sesión</Link>
+           <Link to="/login" className="boton-nicole-login"id="sign-in">Iniciar sesión</Link>
         </div>
       </div>
       <div className="form-information">
@@ -81,6 +81,8 @@ function RegistrationForm() {
                   <option value="donante">Persona</option>
                   <option value="institución">Institución</option>
                 </select><br/>
+
+
 
             <input type="submit" value="Registrarse" />
           </form>

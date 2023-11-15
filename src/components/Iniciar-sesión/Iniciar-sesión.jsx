@@ -129,7 +129,7 @@ const IniciarSesion = () => {
                     <button onClick={handleSubmit} className='dos-botones'>Siguiente</button>
                 </div>
                 <div className='container-fluid div-cinco'>
-                    <button className='dos-botones'>¿Olvidaste tu contraseña?</button>
+                    <Link to='/recuperar-contrasena' className='dos-botones'>¿Olvidaste tu contraseña?</Link>
                 </div>
             </div>
             <div className='col-1'></div>

@@ -1,88 +1,97 @@
 
+
+/* Estilos generales */
 .contenedor {
-    margin-bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 530px;
-    width: 570px;
-    border: 1px solid #0f3240;
     margin: 50px auto;
-    background-color: #0597f2; 
-    border-radius: 15px; 
+    max-width: 570px;
+    border: 1px solid #0f3240;
+    background-color: #0597f2;
+    border-radius: 15px;
     box-shadow: 0px 1px 1px 1px rgb(0 0 0 / 20%);
     padding: 15px;
-    transition: transform 0.2s ease-in-out; 
-}
-
-.contenedor:hover {
-    transform: scale(1.05); 
-}
-
-.titulo {
-    font-size: 1.2em;
+    transition: transform 0.2s ease-in-out;
     text-align: center;
-    padding-top: 0.2em;
+  }
+  
+  .contenedor:hover {
+    transform: scale(1);
+  }
+  
+  .titulo {
+    font-size: 1.2em;
     color: white;
     margin-top: 0.3em;
     margin-bottom: 0.5em;
-}
-
-.subtitulo {
-    margin-top: 0.5em;
-    margin-bottom: 0.3em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    padding: 0.5%;
-}
-
-.formulario {
+  }
+  
+  .formulario {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-}
-
-.entrada {
+  }
+  
+  .subtitulo {
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .entrada {
     margin-bottom: 8px;
     border-radius: 8px;
     box-shadow: 2px 2px 5px 2px rgb(0 100 0 / 10%);
     width: calc(100% - 16px);
     padding: 8px;
     outline: #1ed9d9;
-}
-
-.boton {
+    box-sizing: border-box;
+  }
+  
+  .contrasena-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .boton-mostrar {
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: #0F3240;
+    color: white;
+    border-radius: 8px;
+    height: 30px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .boton-mostrar:hover {
+    background-color: #0F3240;
+  }
+  
+  .botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .boton {
     width: 100%;
     height: 30px;
     font-size: 14px;
-    margin-top: 5px;
     border-radius: 8px;
-    background-color: #0F3240;
-    color: white;
-    transition: background-color 0.3s; 
-}
-
-.boton:hover {
-    background-color: #0F3240; 
-}
-
-.boton-mostrar {
-    width: 100%;
-    height: 30px;
-    font-size: 12px;
-    margin-top: 5px;
-    border-radius: 8px;
-    background-color: #0F3240;
-    color: white;
+    margin-bottom: 10px;
     transition: background-color 0.3s;
-}
-
-.boton-mostrar:hover {
+  }
+  
+  .boton:hover {
     background-color: #0F3240;
-}
-
-
-.entrada:focus {
-    border: 2px solid #1ed9d9;
-    outline-width: 0; 
-}
+  }
+  
+  .enviar {
+    background-color: #0F3240;
+    color: white;
+  }
+  

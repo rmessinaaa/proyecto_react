@@ -97,8 +97,8 @@
 }
 
 .form input[type="submit"]:hover {
- background: linear-gradient(to bottom, #0597f2 10%, #f3f3f3 50%);
-  color: white;
+ background:  #f3f3f3;
+  color: rgb(27, 2, 2);
 }
 
 .hide {
@@ -156,8 +156,7 @@
 }
 
 #seleccionaRol{
-  background-color: #f2f2f2;
-
+  background-color: #F2F2F2;
   color: #00293A;
   border-radius: 20px;
   border: none;
@@ -168,5 +167,4 @@
   margin-bottom: 25px ;
   outline: none;
   width: 100%;
-  
 }

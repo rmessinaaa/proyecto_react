@@ -13,15 +13,18 @@ import PaginaCampaña from './components/pagina-campaña/pagina-campaña';
 import PaginaRegistro from './components/pagina-registro/pagina-registro';
 import PaginaLogin from './components/pagina-login/pagina-login';
 import Pagina_Tus_Campañas from './components/pagina-tus-campañas/pagina-tus-campañas';
+import PaginaCrearCampaña from './components/pagina-crear-campaña/pagina-crear-campaña';
+import PaginaRecuperarContraseña from './components/Pagina-recuperar-contraseña/pagina-recuperar-contraseña';
 
 function Main() {
   const location = useLocation();
   const hideForRegistro = location.pathname !== "/registro";
   const hideForLogin = location.pathname !== "/login";
+  const hideForContrasena = location.pathname !== "/recuperar-contrasena";
 
   return (
       <div>
-          {hideForRegistro && hideForLogin && <Navbar/>}
+          {hideForRegistro && hideForLogin && hideForContrasena && <Navbar/> }
           <Routes>
             <Route path='/' element={<PaginaInicio/>}></Route>
             <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
@@ -32,8 +35,10 @@ function Main() {
             <Route path='/registro' element={<PaginaRegistro />} />
             <Route path='/login' element={<PaginaLogin />} />
             <Route path='/tus-campañas' element={<Pagina_Tus_Campañas/>}/>
-          </Routes>
-          {hideForRegistro && hideForLogin && <Footer/>}
+            <Route path='/crear-campaña' element={<PaginaCrearCampaña/>}/> 
+            <Route path='/recuperar-contrasena' element={<PaginaRecuperarContraseña/>}/>         
+            </Routes>
+          {hideForRegistro && hideForLogin && hideForContrasena && <Footer/> }
       </div>
   );
 }
