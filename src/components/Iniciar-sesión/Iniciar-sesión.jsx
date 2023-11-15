@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Iniciar-sesion.css';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode'; // Asegúrate de importar correctamente jwtDecode
 
