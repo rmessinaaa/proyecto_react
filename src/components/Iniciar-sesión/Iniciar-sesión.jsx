@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './Iniciar-sesion.css'
 import { Link } from "react-router-dom";
@@ -53,7 +54,7 @@ function IniciarSesion(){
                 </div>
 
                 <div className='container-fluid div-cinco'>
-                    <button className='dos-botones'>¿Olvidaste tu contraseña?</button>
+                    <Link to='/recuperar-contrasena' className='dos-botones'>¿Olvidaste tu contraseña?</Link>
                 </div>
             </div>
 

@@ -82,6 +82,8 @@ function RegistrationForm() {
                   <option value="institución">Institución</option>
                 </select><br/>
 
+
+
             <input type="submit" value="Registrarse" />
           </form>
           
