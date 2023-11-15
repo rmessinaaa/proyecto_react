@@ -1,4 +1,5 @@
 
+
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
@@ -12,6 +13,11 @@ function Campañacrear() {
   const [cuenta, setCuenta] = useState("");
   const [categoria, setCategoria] = useState("");
   const [foto, setFoto] = useState(null);
+  const [banco, setBanco] = useState("");
+  const [tipoCuenta, setTipoCuenta] = useState("");
+  const [numeroCuenta, setNumeroCuenta] = useState("");
+  const [correoElectronico, setCorreoElectronico] = useState("");
+  const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
 
   // Manejadores de cambios
   const handleNombreChange = (event) => {
@@ -49,6 +55,22 @@ function Campañacrear() {
     }
   };
 
+  const handleBancoChange = (event) => {
+    setBanco(event.target.value);
+  };
+
+  const handleTipoCuentaChange = (event) => {
+    setTipoCuenta(event.target.value);
+  };
+
+  const handleNumeroCuentaChange = (event) => {
+    setNumeroCuenta(event.target.value);
+  };
+
+  const handleCorreoElectronicoChange = (event) => {
+    setCorreoElectronico(event.target.value);
+  };
+
   // Función para limpiar campos
   const limpiarCampos = () => {
     setNombre("");
@@ -57,12 +79,32 @@ function Campañacrear() {
     setCuenta("");
     setCategoria("");
     setFoto(null);
+    setBanco("");
+    setTipoCuenta("");
+    setNumeroCuenta("");
+    setCorreoElectronico("");
+  };
+
+  // Función para manejar el clic en Mostrar/Ocultar opciones de cuenta
+  const toggleOpcionesCuenta = () => {
+    setMostrarOpcionesCuenta(!mostrarOpcionesCuenta);
   };
 
   // Función para manejar el envío del formulario
   const handleFormSubmit = () => {
     // Aquí puedes implementar la lógica para enviar los datos del formulario
-    console.log("Datos del formulario:", { nombre, descripcion, meta, cuenta, categoria, foto });
+    console.log("Datos del formulario:", {
+      nombre,
+      descripcion,
+      meta,
+      cuenta,
+      categoria,
+      foto,
+      banco,
+      tipoCuenta,
+      numeroCuenta,
+      correoElectronico,
+    });
   };
 
   return (
@@ -107,14 +149,87 @@ function Campañacrear() {
 
         {/* CUENTA */}
         <div>
-          <p className="subtitulo">Cuenta</p>
-          <input
-            className="entrada"
-            type="text"
-            value={cuenta}
-            onChange={handleCuentaChange}
-            placeholder="Ingrese su cuenta de campaña"
-          />
+          <p className="subtitulo" onClick={toggleOpcionesCuenta}>
+            Cuenta {mostrarOpcionesCuenta ? "▲" : "▼"}
+          </p>
+          {mostrarOpcionesCuenta && (
+            <div className="opciones-cuenta">
+              {/* Banco */}
+              <div>
+                <p className="subtitulo">Banco</p>
+                <select
+                  className="entrada"
+                  value={banco}
+                  onChange={handleBancoChange}
+                >
+                  <option value="" disabled defaultValue>
+                    Seleccione un banco
+                  </option>
+                  <option value="BANCO DE CHILE/EDWARDS CITI">BANCO DE CHILE/EDWARDS CITI</option>
+                  <option value="BANCO ESTADO">BANCO ESTADO</option>
+                  <option value="SCOTIABANK">SCOTIABANK</option>
+                  <option value="BCI TBANK">BCI TBANK</option>
+                  <option value="CORPBANCA">CORPBANCA</option>
+                  <option value="BICE">BICE</option>
+                  <option value="HSBC">HSBC</option>
+                  <option value="SANTANDER">SANTANDER</option>
+                  <option value="ITAU">ITAU</option>
+                  <option value="THE BANK OF TOKYO-MITSUBISHI LTD.">THE BANK OF TOKYO-MITSUBISHI LTD.</option>
+                  <option value="SECURITY">SECURITY</option>
+                  <option value="BBVA">BBVA</option>
+                  <option value="DEL DESARROLLO">DEL DESARROLLO</option>
+                  <option value="FALABELLA">FALABELLA</option>
+                  <option value="RIPLEY">RIPLEY</option>
+                  <option value="BANCO CONSORCIO">BANCO CONSORCIO</option>
+                  <option value="BANCO PARIS">BANCO PARIS</option>
+                  <option value="COOPEUCH">COOPEUCH</option>
+                  <option value="INTERNACIONAL">INTERNACIONAL</option>
+                </select>
+              </div>
+
+              {/* Tipo de Cuenta */}
+<div>
+  <p className="subtitulo">Tipo de Cuenta</p>
+  <select
+    className="entrada"
+    value={tipoCuenta}
+    onChange={handleTipoCuentaChange}
+  >
+    <option value="" disabled defaultValue>
+      Seleccione un tipo de cuenta
+    </option>
+    <option value="cuentaVista">Cuenta Vista</option>
+    <option value="cuentaCorriente">Cuenta Corriente</option>
+    <option value="cuentaRUT">Cuenta Rut</option>
+  </select>
+</div>
+
+              {/* Número de Cuenta */}
+              <div>
+                <p className="subtitulo">Número de Cuenta</p>
+                <input
+                  className="entrada"
+                  type="text"
+                  value={numeroCuenta}
+                  onChange={handleNumeroCuentaChange}
+                  placeholder="Ingrese su número de cuenta"
+
+                />
+              </div>
+
+              {/* Correo Electrónico */}
+              <div>
+                <p className="subtitulo">Correo Electrónico</p>
+                <input
+                  className="entrada"
+                  type="email"
+                  value={correoElectronico}
+                  onChange={handleCorreoElectronicoChange}
+                  placeholder="Ingrese su correo electrónico"
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         {/* CATEGORÍA */}
@@ -141,7 +256,11 @@ function Campañacrear() {
           <p className="subtitulo">Foto</p>
           {foto && (
             <div className="imagen-contenedor">
-              <img src={foto} alt="Imagen de la campaña" className="imagen-preview" />
+              <img
+                src={foto}
+                alt="Imagen de la campaña"
+                className="imagen-preview"
+              />
               <button className="boton-eliminar" onClick={() => setFoto(null)}>
                 Eliminar Foto
               </button>
@@ -158,15 +277,17 @@ function Campañacrear() {
         </div>
 
         {/* Botones */}
-        <div className="boton-div">
-          <button className="boton" onClick={limpiarCampos}>
-            Reiniciar
-          </button>
-        </div>
-        <div className="boton-div">
-          <button className="boton" onClick={handleFormSubmit}>
-            Enviar
-          </button>
+        <div className="botones-container">
+          <div className="boton-div">
+            <button className="boton" onClick={limpiarCampos}>
+              Reiniciar
+            </button>
+          </div>
+          <div className="boton-div">
+            <button className="boton" onClick={handleFormSubmit}>
+              Enviar
+            </button>
+          </div>
         </div>
       </div>
     </div>

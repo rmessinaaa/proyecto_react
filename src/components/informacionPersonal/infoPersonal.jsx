@@ -31,12 +31,12 @@ function InfoPersonal() {
   };
 
   return (
-    <div className="contenedor" style={{ fontFamily: "Montserrat" }}>
+    <div className="contenedor">
       <h1 className="titulo">Información Personal</h1>
       
       <div className="formulario">
-        <p className="subtitulo">Nombre de Usuario</p>
-        <form>
+        <div className="campo">
+          <label className="subtitulo">Nombre de Usuario</label>
           <input
             className="entrada"
             type="text"
@@ -44,10 +44,10 @@ function InfoPersonal() {
             onChange={handleNombreChange}
             placeholder="Ingrese su nombre de usuario"
           />
-        </form>
+        </div>
 
-        <p className="subtitulo">Mail</p>
-        <form>
+        <div className="campo">
+          <label className="subtitulo">Correo Electrónico</label>
           <input
             className="entrada"
             type="text"
@@ -55,36 +55,34 @@ function InfoPersonal() {
             onChange={handleMailChange}
             placeholder="Ingrese su dirección de correo electrónico"
           />
-        </form>
+        </div>
 
-        <p className="subtitulo">Contraseña</p>
-        <form>
-          <input
-            className="entrada"
-            type={mostrarContrasena ? "text" : "password"}
-            value={contrasena}
-            onChange={handleContrasenaChange}
-            placeholder="Ingrese su contraseña"
-          />
-          <button
-            className="boton"
-            type="button"
-            onClick={toggleMostrarContrasena}
-          >
-            Mostrar Contraseña
-          </button>
-        </form>
+        <div className="campo">
+          <label className="subtitulo">Contraseña</label>
+          <div className="contrasena-container">
+            <input
+              className="entrada"
+              type={mostrarContrasena ? "text" : "password"}
+              value={contrasena}
+              onChange={handleContrasenaChange}
+              placeholder="Ingrese su contraseña"
+            />
+            <button
+              className="boton boton-mostrar"
+              type="button"
+              onClick={toggleMostrarContrasena}
+            >
+              {mostrarContrasena ? "Ocultar" : "Mostrar"}
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="botones-container">
-        <div className="boton-div">
-          <button className="boton" onClick={limpiarCampos}>
-            Cambiar Datos
-          </button>
-        </div>
-        <div className="boton-div">
-          <button className="boton">Enviar</button>
-        </div>
+        <button className="boton" onClick={limpiarCampos}>
+          Cambiar Datos
+        </button>
+        <button className="boton enviar">Enviar</button>
       </div>
     </div>
   );
