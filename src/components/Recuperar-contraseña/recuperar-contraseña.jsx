@@ -21,7 +21,7 @@ function RecuperarContraseña(){
                             <input className='input-r' type="email" placeholder='Ingresa tu email.' required/><br/><br/>
                         
                             <Link to='#' className='boton-r' type="submit">Enviar</Link><br/>
-                            <Link to='/login' className='boton-r' type="submit">Volver</Link><br/><br/>
+                            
 
                 </form>
 

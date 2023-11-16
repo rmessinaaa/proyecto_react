@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
@@ -9,7 +8,7 @@ function Campañacrear() {
   // Estados
   const [nombre, setNombre] = useState("");
   const [descripcion, setDescripcion] = useState("");
-  const [meta, setMeta] = useState("");
+  const [rangoMeta, setRangoMeta] = useState("");
   const [cuenta, setCuenta] = useState("");
   const [categoria, setCategoria] = useState("");
   const [foto, setFoto] = useState(null);
@@ -28,8 +27,8 @@ function Campañacrear() {
     setDescripcion(value);
   };
 
-  const handleMetaChange = (event) => {
-    setMeta(event.target.value);
+  const handleRangoMetaChange = (event) => {
+    setRangoMeta(event.target.value);
   };
 
   const handleCuentaChange = (event) => {
@@ -75,7 +74,7 @@ function Campañacrear() {
   const limpiarCampos = () => {
     setNombre("");
     setDescripcion("");
-    setMeta("");
+    setRangoMeta("");
     setCuenta("");
     setCategoria("");
     setFoto(null);
@@ -96,7 +95,7 @@ function Campañacrear() {
     console.log("Datos del formulario:", {
       nombre,
       descripcion,
-      meta,
+      rangoMeta,
       cuenta,
       categoria,
       foto,
@@ -135,18 +134,17 @@ function Campañacrear() {
           />
         </div>
 
-        {/* META */}
-        <div>
-          <p className="subtitulo">Meta</p>
-          <input
-            className="entrada"
-            type="number"
-            value={meta}
-            onChange={handleMetaChange}
-            placeholder="$/ Ingrese el valor de meta en pesos chilenos"
-          />
-        </div>
-
+       {/* META */}
+<div>
+  <p className="subtitulo">Rango Meta</p>
+  <input
+    className="entrada"
+    type="number"
+    value={rangoMeta}
+    onChange={handleRangoMetaChange}
+    placeholder="Ingrese el monto en pesos chilenos"
+  />
+</div>
         {/* CUENTA */}
         <div>
           <p className="subtitulo" onClick={toggleOpcionesCuenta}>

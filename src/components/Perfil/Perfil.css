@@ -1,23 +1,50 @@
+/* Perfil.css */
 
-
-.text-center{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #0f3240;
-    
+.perfil-container {
+  display: flex;
+  justify-content: center; /* Cambiado a "center" para centrar en la pantalla */
+  align-items: center;
+  flex-direction: column;
+  margin: 20px auto; /* Cambiado para centrar y ajustar automáticamente los márgenes laterales */
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
 }
 
-.img-fluid{
-    border-radius: 50%;
-    width: 180px;
-    margin-top: 20px;
+.imagen-container {
+  width: 320px;
+  height: 300px;
+  border: 2px solid #ccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: background-size 0.3s ease;
+  margin-right: 20px;
 }
 
-#boton{
-border-radius: 50px;
-background-color: #0f3240;
-color: white;
-height: 40px;
-width: 200px;
-margin-top: 20px;
-} 
+.imagen-fijada {
+  background-size: 120% !important;
+}
+
+.botones-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.boton-accion {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.boton-accion:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos adicionales según necesidades */
