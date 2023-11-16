@@ -166,22 +166,6 @@ function Campañacrear() {
                   <option value="BANCO DE CHILE/EDWARDS CITI">BANCO DE CHILE/EDWARDS CITI</option>
                   <option value="BANCO ESTADO">BANCO ESTADO</option>
                   <option value="SCOTIABANK">SCOTIABANK</option>
-                  <option value="BCI TBANK">BCI TBANK</option>
-                  <option value="CORPBANCA">CORPBANCA</option>
-                  <option value="BICE">BICE</option>
-                  <option value="HSBC">HSBC</option>
-                  <option value="SANTANDER">SANTANDER</option>
-                  <option value="ITAU">ITAU</option>
-                  <option value="THE BANK OF TOKYO-MITSUBISHI LTD.">THE BANK OF TOKYO-MITSUBISHI LTD.</option>
-                  <option value="SECURITY">SECURITY</option>
-                  <option value="BBVA">BBVA</option>
-                  <option value="DEL DESARROLLO">DEL DESARROLLO</option>
-                  <option value="FALABELLA">FALABELLA</option>
-                  <option value="RIPLEY">RIPLEY</option>
-                  <option value="BANCO CONSORCIO">BANCO CONSORCIO</option>
-                  <option value="BANCO PARIS">BANCO PARIS</option>
-                  <option value="COOPEUCH">COOPEUCH</option>
-                  <option value="INTERNACIONAL">INTERNACIONAL</option>
                 </select>
               </div>
 
