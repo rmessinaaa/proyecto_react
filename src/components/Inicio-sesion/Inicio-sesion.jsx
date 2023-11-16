@@ -35,7 +35,7 @@ function RegistrationForm() {
 
     if (response.ok) {
       // Manejar respuesta exitosa
-      navigate('/');
+      navigate('/login');
     } else {
       // Manejar errores
       alert("Error en el registro");
