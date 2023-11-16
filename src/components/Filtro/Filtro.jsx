@@ -32,6 +32,7 @@ function CustomSelect({ label, value, onChange, options, isSearchable }) {
 }
 
 function Filtro() {
+  const [inputRegion, setInputRegion] = useState("");
   const [inputCategoria, setInputCategoria] = useState("");
   const [inputValor, setInputValor] = useState("");
   const [inputInstitucion, setInputInstitucion] = useState("");
@@ -41,29 +42,32 @@ function Filtro() {
     // Puedes agregar lógica adicional según sea necesario
   };
 
+  const regionesOptions = [
+    "Región de Arica y Parinacota",
+    "Región de Tarapacá",
+    "Región de Antofagasta",
+    "Región de Atacama",
+    "Región de Coquimbo",
+    "Región de Valparaíso",
+    "Región Metropolitana",
+    "Región del Libertador General Bernardo O'Higgins",
+    "Región del Maule",
+    "Región de Ñuble",
+    "Región del Biobío",
+    "Región de La Araucanía",
+    "Región de Los Ríos",
+    "Región de Los Lagos",
+    "Región de Aysén del General Carlos Ibáñez del Campo",
+    "Región de Magallanes y de la Antártica Chilena",
+  ];
+
   const categoriasOptions = ["Vivienda", "Educación", "Infancia", "Rural", "Salud"];
-  const valoresOptions = ["$5.000 pesos hasta $10.000 pesos.",
-  "$10.000 pesos hasta $15.000 pesos.",
-  "$15.000 pesos hasta $20.000 pesos.",
-  "$20.000 pesos hasta $25.000 pesos.",
-  "$25.000 pesos hasta $30.000 pesos.",
-  "$30.000 pesos hasta $35.000 pesos.",
-  "$35.000 pesos hasta $40.000 pesos.",
-  "$40.000 pesos hasta $45.000 pesos.",
-  "$45.000 pesos hasta $50.000 pesos.",
-  "$50.000 pesos hasta $55.000 pesos."];
-  const institucionesOptions = ["Opción A", "Opción B", "Opción C"];
 
   const handleRestablecer = () => {
-    // Restablecer los valores a los predeterminados
+    setInputInstitucion("");
+    setInputRegion("");
     setInputCategoria("");
     setInputValor("");
-    setInputInstitucion("");
-  };
-
-  const handleEnviar = () => {
-    // Agregar lógica para enviar los datos
-    console.log("Enviar");
   };
 
   return (
@@ -73,6 +77,22 @@ function Filtro() {
       </div>
 
       <CustomSelect
+        label="Instituciones"
+        value={inputInstitucion}
+        onChange={(value) => setInputInstitucion(value)}
+        options={[]} // Puedes agregar opciones específicas para instituciones si es necesario
+        isSearchable={true}
+      />
+
+      <CustomSelect
+        label="Región"
+        value={inputRegion}
+        onChange={(value) => setInputRegion(value)}
+        options={regionesOptions}
+        isSearchable={false}
+      />
+
+      <CustomSelect
         label="Categoría"
         value={inputCategoria}
         onChange={(value) => setInputCategoria(value)}
@@ -80,31 +100,10 @@ function Filtro() {
         isSearchable={false}
       />
 
-      <CustomSelect
-        label="Valor"
-        value={inputValor}
-        onChange={(value) => setInputValor(value)}
-        options={valoresOptions}
-        isSearchable={false}
-      />
-
-      <CustomSelect
-        label="Instituciones"
-        value={inputInstitucion}
-        onChange={(value) => setInputInstitucion(value)}
-        options={institucionesOptions}
-        isSearchable={true}
-      />
-
       <div className="botones-container">
         <div className="boton-div">
           <button className="boton" onClick={handleRestablecer}>
             Restablecer
-          </button>
-        </div>
-        <div className="boton-div">
-          <button className="boton" onClick={handleEnviar}>
-            Enviar
           </button>
         </div>
       </div>

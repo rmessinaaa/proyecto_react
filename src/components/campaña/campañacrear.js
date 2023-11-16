@@ -134,34 +134,17 @@ function Campañacrear() {
           />
         </div>
 
-        {/* META */}
-        <div>
-          <p className="subtitulo">Rango Meta</p>
-          <select
-            className="entrada"
-            value={rangoMeta}
-            onChange={handleRangoMetaChange}
-          >
-            <option value="" disabled defaultValue>
-              Seleccione un rango meta
-            </option>
-            {["$5.000 pesos hasta $10.000 pesos.",
-              "$10.000 pesos hasta $15.000 pesos.",
-              "$15.000 pesos hasta $20.000 pesos.",
-              "$20.000 pesos hasta $25.000 pesos.",
-              "$25.000 pesos hasta $30.000 pesos.",
-              "$30.000 pesos hasta $35.000 pesos.",
-              "$35.000 pesos hasta $40.000 pesos.",
-              "$40.000 pesos hasta $45.000 pesos.",
-              "$45.000 pesos hasta $50.000 pesos.",
-              "$50.000 pesos hasta $55.000 pesos."].map((option, index) => (
-                <option key={index} value={option}>
-                  {option}
-                </option>
-              ))}
-          </select>
-        </div>
-
+       {/* META */}
+<div>
+  <p className="subtitulo">Rango Meta</p>
+  <input
+    className="entrada"
+    type="number"
+    value={rangoMeta}
+    onChange={handleRangoMetaChange}
+    placeholder="Ingrese el monto en pesos chilenos"
+  />
+</div>
         {/* CUENTA */}
         <div>
           <p className="subtitulo" onClick={toggleOpcionesCuenta}>
@@ -183,22 +166,6 @@ function Campañacrear() {
                   <option value="BANCO DE CHILE/EDWARDS CITI">BANCO DE CHILE/EDWARDS CITI</option>
                   <option value="BANCO ESTADO">BANCO ESTADO</option>
                   <option value="SCOTIABANK">SCOTIABANK</option>
-                  <option value="BCI TBANK">BCI TBANK</option>
-                  <option value="CORPBANCA">CORPBANCA</option>
-                  <option value="BICE">BICE</option>
-                  <option value="HSBC">HSBC</option>
-                  <option value="SANTANDER">SANTANDER</option>
-                  <option value="ITAU">ITAU</option>
-                  <option value="THE BANK OF TOKYO-MITSUBISHI LTD.">THE BANK OF TOKYO-MITSUBISHI LTD.</option>
-                  <option value="SECURITY">SECURITY</option>
-                  <option value="BBVA">BBVA</option>
-                  <option value="DEL DESARROLLO">DEL DESARROLLO</option>
-                  <option value="FALABELLA">FALABELLA</option>
-                  <option value="RIPLEY">RIPLEY</option>
-                  <option value="BANCO CONSORCIO">BANCO CONSORCIO</option>
-                  <option value="BANCO PARIS">BANCO PARIS</option>
-                  <option value="COOPEUCH">COOPEUCH</option>
-                  <option value="INTERNACIONAL">INTERNACIONAL</option>
                 </select>
               </div>
 
