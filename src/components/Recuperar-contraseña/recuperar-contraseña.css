@@ -8,9 +8,11 @@
     text-align: center; 
     width: 30%; /* Puedes ajustar el porcentaje según tus necesidades */
     margin: 0 auto; /* Centra el div horizontalmente */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    
     margin-top: 50px;
     margin-bottom: 50px;
+    width: auto;
+max-width: 80%;
     
 }
 

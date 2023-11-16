@@ -52,9 +52,8 @@ function RegistrationForm() {
         <div className="info-childs">
           <h2>Bienvenido</h2>
           <p>
-            Únete a nuestra causa y haz la diferencia
-            <br />
             Inicia sesión con tus datos
+            <br />
           </p>
           {/* <input type="button" value="Iniciar Sesión" id="sign-in" /> */}
            <Link to="/login" className="boton-nicole-login"id="sign-in">Iniciar sesión</Link>

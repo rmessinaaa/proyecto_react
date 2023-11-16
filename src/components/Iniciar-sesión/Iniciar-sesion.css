@@ -176,7 +176,35 @@
     margin-right: 35%;
 }
 
+.popup-content {
+    background-image: url("../../../public/ilustraciones/12244.jpg"); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;  /* Ajusta según tus necesidades */
+    /* Otros estilos según sea necesario */
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 40px;
+    color: black;
+  }
   
-  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
 
- 
