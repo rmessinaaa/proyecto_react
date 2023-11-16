@@ -3,7 +3,6 @@ import './Iniciar-sesion.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
-import { Link } from 'react-router-dom';
 import RecuperarContraseña from '../Recuperar-contraseña/recuperar-contraseña'
 
 const IniciarSesion = () => {
@@ -12,10 +11,17 @@ const IniciarSesion = () => {
   const [password, setPassword] = useState('');
   const [userData, setUserData] = useState({});
   const [showPopup, setShowPopup] = useState(false);
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = document.cookie.split('; ').find(row => row.startsWith('token=')).split('=')[1];
-    if (token) {
+    const cookieString = document.cookie;
+    console.log('Cookie String:', cookieString);
+
+    const tokenRow = cookieString.split('; ').find(row => row.startsWith('token='));
+    console.log('Token Row:', tokenRow);
+  
+    if (tokenRow) {
+      const token = tokenRow.split('=')[1];
       try {
         const decodedToken = jwtDecode(token);
         const userId = decodedToken.id.id;
@@ -44,9 +50,12 @@ const IniciarSesion = () => {
       alert('Usuario y/o contraseña inválidos');
     }
   };
+  
+
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
+
   return (
     <div className='row'>
       <div className='col-1'></div>
