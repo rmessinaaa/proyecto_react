@@ -87,7 +87,13 @@ const IniciarSesion = () => {
             <div className='col-10 inicio'>
                 <div className='row azul'>
                     <div className="container-fluid div-uno">
-                        <h1 className='titulos-principales'>Inicia sesión en Sinergia</h1>
+                        <h2>Inicia sesión en Sinergia</h2>
+                        <br />
+                        <p>
+
+            Únete a nuestra causa y haz la diferencia
+           
+          </p>
                     </div>
                 </div>
                 <div className='container-fluid div-dos'>
