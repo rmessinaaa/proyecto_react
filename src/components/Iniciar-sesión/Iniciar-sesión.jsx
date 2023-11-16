@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Iniciar-sesion.css';
 import { useNavigate } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode'; // Asegúrate de importar correctamente jwtDecode
+import { jwtDecode } from 'jwt-decode';  // Asegúrate de importar correctamente jwtDecode
+import { Link } from 'react-router-dom';
 
 const IniciarSesion = () => {
     //Funcion de navegacion
