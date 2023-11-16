@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
@@ -9,7 +8,7 @@ function Campañacrear() {
   // Estados
   const [nombre, setNombre] = useState("");
   const [descripcion, setDescripcion] = useState("");
-  const [meta, setMeta] = useState("");
+  const [rangoMeta, setRangoMeta] = useState("");
   const [cuenta, setCuenta] = useState("");
   const [categoria, setCategoria] = useState("");
   const [foto, setFoto] = useState(null);
@@ -28,8 +27,8 @@ function Campañacrear() {
     setDescripcion(value);
   };
 
-  const handleMetaChange = (event) => {
-    setMeta(event.target.value);
+  const handleRangoMetaChange = (event) => {
+    setRangoMeta(event.target.value);
   };
 
   const handleCuentaChange = (event) => {
@@ -75,7 +74,7 @@ function Campañacrear() {
   const limpiarCampos = () => {
     setNombre("");
     setDescripcion("");
-    setMeta("");
+    setRangoMeta("");
     setCuenta("");
     setCategoria("");
     setFoto(null);
@@ -96,7 +95,7 @@ function Campañacrear() {
     console.log("Datos del formulario:", {
       nombre,
       descripcion,
-      meta,
+      rangoMeta,
       cuenta,
       categoria,
       foto,
@@ -137,14 +136,30 @@ function Campañacrear() {
 
         {/* META */}
         <div>
-          <p className="subtitulo">Meta</p>
-          <input
+          <p className="subtitulo">Rango Meta</p>
+          <select
             className="entrada"
-            type="number"
-            value={meta}
-            onChange={handleMetaChange}
-            placeholder="$/ Ingrese el valor de meta en pesos chilenos"
-          />
+            value={rangoMeta}
+            onChange={handleRangoMetaChange}
+          >
+            <option value="" disabled defaultValue>
+              Seleccione un rango meta
+            </option>
+            {["$5.000 pesos hasta $10.000 pesos.",
+              "$10.000 pesos hasta $15.000 pesos.",
+              "$15.000 pesos hasta $20.000 pesos.",
+              "$20.000 pesos hasta $25.000 pesos.",
+              "$25.000 pesos hasta $30.000 pesos.",
+              "$30.000 pesos hasta $35.000 pesos.",
+              "$35.000 pesos hasta $40.000 pesos.",
+              "$40.000 pesos hasta $45.000 pesos.",
+              "$45.000 pesos hasta $50.000 pesos.",
+              "$50.000 pesos hasta $55.000 pesos."].map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+          </select>
         </div>
 
         {/* CUENTA */}
