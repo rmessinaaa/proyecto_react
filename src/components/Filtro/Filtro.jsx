@@ -32,42 +32,42 @@ function CustomSelect({ label, value, onChange, options, isSearchable }) {
 }
 
 function Filtro() {
-  const [inputInstitucion, setInputInstitucion] = useState("");
   const [inputRegion, setInputRegion] = useState("");
-  const [inputComuna, setInputComuna] = useState("");
   const [inputCategoria, setInputCategoria] = useState("");
   const [inputValor, setInputValor] = useState("");
+  const [inputInstitucion, setInputInstitucion] = useState("");
 
   const handInputChange = (seccion, value) => {
     console.log(`Ingresado en ${seccion}:`, value);
+    // Puedes agregar lógica adicional según sea necesario
   };
 
-  const regionesOptions = ["Región Metropolitana", "Región 1", "Región 2", "Región 3", /* ... */];
-  const comunasOptions = {
-    "Región Metropolitana": [
-      "Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba",
-      "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina",
-      "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa",
-      "Padre Hurtado", "Paine", "Pedro Aguirre Cerda", "Peñalolén", "Pirque", "Providencia",
-      "Pudahuel", "Puente Alto", "Quilicura", "Quinta Normal", "Recoleta", "Renca",
-      "San Bernardo", "San Joaquín", "San José de Maipo", "San Miguel", "San Pedro", "San Ramón",
-      "Santiago", "Talagante", "Tiltil", "Vitacura",
-    ],
-    // ... otras regiones y comunas
-  };
+  const regionesOptions = [
+    "Región de Arica y Parinacota",
+    "Región de Tarapacá",
+    "Región de Antofagasta",
+    "Región de Atacama",
+    "Región de Coquimbo",
+    "Región de Valparaíso",
+    "Región Metropolitana",
+    "Región del Libertador General Bernardo O'Higgins",
+    "Región del Maule",
+    "Región de Ñuble",
+    "Región del Biobío",
+    "Región de La Araucanía",
+    "Región de Los Ríos",
+    "Región de Los Lagos",
+    "Región de Aysén del General Carlos Ibáñez del Campo",
+    "Región de Magallanes y de la Antártica Chilena",
+  ];
 
   const categoriasOptions = ["Vivienda", "Educación", "Infancia", "Rural", "Salud"];
 
   const handleRestablecer = () => {
     setInputInstitucion("");
     setInputRegion("");
-    setInputComuna("");
     setInputCategoria("");
     setInputValor("");
-  };
-
-  const handleEnviar = () => {
-    console.log("Enviar");
   };
 
   return (
@@ -80,26 +80,15 @@ function Filtro() {
         label="Instituciones"
         value={inputInstitucion}
         onChange={(value) => setInputInstitucion(value)}
-        options={[]} 
+        options={[]} // Puedes agregar opciones específicas para instituciones si es necesario
         isSearchable={true}
       />
 
       <CustomSelect
         label="Región"
         value={inputRegion}
-        onChange={(value) => {
-          setInputRegion(value);
-          setInputComuna(""); // Limpiar la comuna al cambiar la región
-        }}
+        onChange={(value) => setInputRegion(value)}
         options={regionesOptions}
-        isSearchable={false}
-      />
-
-      <CustomSelect
-        label="Comuna"
-        value={inputComuna}
-        onChange={(value) => setInputComuna(value)}
-        options={comunasOptions[inputRegion] || []}
         isSearchable={false}
       />
 
@@ -115,11 +104,6 @@ function Filtro() {
         <div className="boton-div">
           <button className="boton" onClick={handleRestablecer}>
             Restablecer
-          </button>
-        </div>
-        <div className="boton-div">
-          <button className="boton" onClick={handleEnviar}>
-            Enviar
           </button>
         </div>
       </div>
