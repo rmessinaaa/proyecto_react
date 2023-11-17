@@ -208,3 +208,21 @@
     
   }
 
+/* Establece la posición del contenedor como relativa */
+.mostrar {
+    position: relative;
+  }
+  
+  /* Establece el icono con una posición absoluta */
+  .mostrar svg {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-80%);
+    color: #0F3240;
+  }
+  
+  /* Establece el relleno dentro del campo de entrada */
+  input[type="password"] {
+    padding-right: 30px;
+  }
