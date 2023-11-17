@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
+import DropdownInstituciones from "./dropdown-instituciones";
+import getRol from "../../funcion-getRol/funcion-getRol";
 
 const Iniciar = <NavLink to="/">Inicio</NavLink>;
 const Buscar = <NavLink to="/buscar">Buscar</NavLink>;
@@ -13,24 +15,7 @@ const CerrarSesion = (
   </NavLink>
 );
 
-const DropdownLinks = (
-  <Dropdown>
-    <Dropdown.Toggle  className="Dropdown">
-      Para Organizaciones
-    </Dropdown.Toggle>
-
-    <Dropdown.Menu className="custom-dropdown-menu">
-    <Dropdown.Item>
-  <NavLink to="/tus-campañas" className="nav__link">
-    Tus campañas
-  </NavLink>  
-</Dropdown.Item>      <Dropdown.Item><NavLink to="/crear-campaña" className="nav__link">
-    Crear campaña
-  </NavLink>  </Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown>
-);
-
+const DropdownLinks = <DropdownInstituciones />
 
 const topNav = [
   { id: 1, label: Iniciar, href: "#" },
