@@ -16,52 +16,44 @@ import Pagina_Tus_Campañas from './components/pagina-tus-campañas/pagina-tus-c
 import PaginaCrearCampaña from './components/pagina-crear-campaña/pagina-crear-campaña';
 import PaginaRecuperarContraseña from './components/Pagina-recuperar-contraseña/pagina-recuperar-contraseña';
 import getRol from './components/funcion-getRol/funcion-getRol';
+import getAutenticacion from './components/funcion-autenticacion/autenticacion';
 
 function Main() {
-
-  console.log("Componente Main montado");
 
   const location = useLocation();
   const hideForRegistro = location.pathname !== "/registro";
   const hideForLogin = location.pathname !== "/login";
   const hideForContrasena = location.pathname !== "/recuperar-contrasena";
   const rolUsuario = getRol()
-
-  console.log("Antes de la condición - Rol del usuario:", rolUsuario);
-  console.log("Antes de la condición - Ruta actual:", location.pathname);
+  const AutenticacionUser = getAutenticacion()
 
   if (rolUsuario !== 'institución' && location.pathname === '/tus-campañas') {
-    console.log("Redirigiendo a /");
     return <Navigate to='/' />;
   }
 
-  console.log("Después de la condición - Rol del usuario:", rolUsuario);
-  console.log("Después de la condición - Ruta actual:", location.pathname);
-
-
+  if (AutenticacionUser !== true && (location.pathname === '/' || location.pathname === '/nosotros' || location.pathname === '/buscar' || location.pathname === '/donaciones' || location.pathname === '/perfil' || location.pathname === '/ficha-campaña' || location.pathname === '/tus-campañas' || location.pathname === '/crear-campaña')) {
+    return <Navigate to='/registro' />;
+  }
 
   return (
       <div>
           {hideForRegistro && hideForLogin && hideForContrasena && <Navbar/> }
           <Routes>
-              <Route path='/' element={<PaginaInicio/>}></Route>
-              <Route path='/nosotros' element={<PaginaNosotros/>}></Route>
-              <Route path='/buscar' element={<PaginaBuscador/>}></Route>
-              <Route path='/donaciones' element={<PaginaDonaciones/>}></Route>
-              <Route path='/perfil' element={<PaginaPerfil/>}></Route>
-              <Route path='/ficha-campaña' element={<PaginaCampaña />} />
-              <Route path='/registro' element={<PaginaRegistro />} />
-              <Route path='/login' element={<PaginaLogin />} />
-              <Route
-                path='/tus-campañas'
-                element={rolUsuario === 'institución' ? <Pagina_Tus_Campañas /> : <Navigate to='/' />}
-              />
-              <Route
-                path='/crear-campaña'
-                element={rolUsuario === 'institución' ? <PaginaCrearCampaña /> : <Navigate to='/'/>} 
-              />  
-              <Route path='/recuperar-contrasena' element={<PaginaRecuperarContraseña/>}/>         
-            </Routes>
+            {/* Páginas Públicas */}
+            <Route path='/registro' element={<PaginaRegistro />} />
+            <Route path='/login' element={<PaginaLogin />} />
+            <Route path='/recuperar-contrasena' element={<PaginaRecuperarContraseña />} />
+
+            {/* Páginas Privadas */}
+            <Route path='/' element={<PaginaInicio />} />
+            <Route path='/nosotros' element={<PaginaNosotros />} /> 
+            <Route path='/buscar' element={<PaginaBuscador />} />
+            <Route path='/donaciones' element={<PaginaDonaciones />} />
+            <Route path='/perfil' element={<PaginaPerfil />} />
+            <Route path='/ficha-campaña' element={<PaginaCampaña />} />
+            <Route path='/tus-campañas' element={<Pagina_Tus_Campañas />} />
+            <Route path='/crear-campaña' element={<PaginaCrearCampaña />} />
+          </Routes>
           {hideForRegistro && hideForLogin && hideForContrasena && <Footer/> }
       </div>
   );
@@ -70,7 +62,7 @@ function Main() {
 function App() {
   return (
       <BrowserRouter>
-          <Main/>
+        <Main />
       </BrowserRouter>
   );
 }
