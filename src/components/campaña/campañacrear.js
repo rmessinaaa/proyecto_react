@@ -106,6 +106,9 @@ function CreateCampaign() {
       numeroCuenta,
       email,
     };
+    const image = {
+      img,
+    }
     const token = window.localStorage.getItem("token");
     fetch("http://localhost:8080/api/campanas", {
       method: 'POST',
