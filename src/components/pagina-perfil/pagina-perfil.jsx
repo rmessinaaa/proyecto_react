@@ -1,7 +1,7 @@
 import React from 'react';
 import Infopersonal from '../informacionPersonal/infoPersonal';
 import Perfil from '../Perfil/Perfil';
-import SubsPerfilIntereses from '../subs-perfil-intereses/subs-perfil-intereses';
+// import SubsPerfilIntereses from '../subs-perfil-intereses/subs-perfil-intereses';
 
 function PaginaPerfil(){
     return(
@@ -17,9 +17,9 @@ function PaginaPerfil(){
             <div className='centrar-contenido'>
                 <Infopersonal />
             </div>
-            <div className='centrar-contenido container container-blanco'>
+            {/* <div className='centrar-contenido container container-blanco'>
                 <SubsPerfilIntereses />
-            </div>
+            </div>  */}
         </div>
     )
 }
