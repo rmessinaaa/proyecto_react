@@ -1,7 +1,7 @@
 
 .inicio{
     box-shadow: 0 0 2px 2px;
-    height: 700px;
+    height: 620px;
     border-radius: 20px;
     padding-top: 30px;
     outline: none;
@@ -11,10 +11,7 @@
 }
 
 
-.div-uno{
-    padding-bottom: ;
-    
-}
+
 
 .boton-g{
     background-image: url(google.png);
@@ -22,29 +19,28 @@
     background-size: 30px;
     background-position: 0.5em center;
     text-align: center;
-    line-height: 35px;
+    line-height: 25px;
     border-radius: 20px;
-    width: 280px;
-
     background-color:  #0F3240;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     background-color: #00293A;
     outline: none;
     border: solid 2px  #0F3240;
-    border-radius: 30px;
-    padding: 10px 20px;
+    border-radius: 20px;
+    padding: 10px 1px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 350px;
+    width: 270px;
+    padding-left: 20px;
 }
 
 .boton-g:hover {
     background-color: white;
     border: 2px solid #0597f2;
     color: #0597f2;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
 }
 
 /* Ajusta el tamaño del texto y la imagen para pantallas pequeñas */
@@ -73,19 +69,20 @@
   }
 
   .input{
-    border-radius: 50px;
     color: white;
     background-color:  #0F3240;
-    font-family: 'Montserrat', sans-serif;
-    
-    background-color: white;
-    outline: none;
-    border: solid 2px #0597f2;
-    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif; 
     padding: 10px 20px;
     color: #00293A;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+     border-radius: 20px;
+    color :rgb(0, 0, 0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+    width: 100%;
 }
 
 
@@ -95,16 +92,13 @@
     background-color:  #0F3240;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    background-color: #0F3240;
     outline: none;
     border: solid 2px #0F3240;
-    border-radius: 20px;
     padding: 10px 20px;
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;  
     margin-top: 15px;  
-    width: 350px;
+    width: 250px;
 }
 
 .dos-botones:hover {
@@ -127,7 +121,7 @@
     justify-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-
+    width: 250px;
 }
 
 .div-cuatro{

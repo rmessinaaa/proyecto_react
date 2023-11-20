@@ -12,24 +12,26 @@
     margin-top: 50px;
     margin-bottom: 50px;
     width: auto;
-max-width: 80%;
-    
+    max-width: 80%;
 }
 
 .input-r {
-    border-radius: 50px;
     color: #00293A;
     font-family: 'Montserrat', sans-serif;  
-    background-color: white;
-    outline: none;
-    border: solid 2px #0F3240;
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: border-color 0.3s ease;
+   /* transition: border-color 0.3s ease;
+    transition: background-color 0.3s ease; */
+    background-color: aliceblue;
+    outline: none;
+    border: none;
+     border-radius: 20px;
+    color :rgb(0, 0, 0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
 }
 
-.input-r:hover {
+/*.input-r:hover {
     background-color: white;
     border: 2px solid #0597f2;
 
@@ -38,7 +40,7 @@ max-width: 80%;
 
 .input-r:focus {
     border-color: #0597f2; 
-}
+}*/
 
 .boton-r {
     border-radius: 50px;

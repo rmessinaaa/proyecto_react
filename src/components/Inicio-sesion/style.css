@@ -158,7 +158,7 @@
 #seleccionaRol{
   background-color: #F2F2F2;
   color: #00293A;
-  border-radius: 20px;
+  border-radius: 15px;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
@@ -167,6 +167,7 @@
   margin-bottom: 25px ;
   outline: none;
   width: 100%;
+  background-color: aliceblue;
 }
 
 /* Establece la posición del contenedor como relativa */
