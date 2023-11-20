@@ -18,6 +18,8 @@ function CreateCampaign() {
   const [email, setEmail] = useState("");
   const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
 
+  //Función para que no se vean las <p> en la descripción
+  
   // Manejadores de cambios
   const handleNombreChange = (event) => {
     setTitle(event.target.value);
@@ -138,29 +140,30 @@ function CreateCampaign() {
             placeholder="Ingrese su nombre de campaña"
           />
         </div>
-
+        
         {/* Descripción */}
         <div>
           <p className="subtitulo">Descripción de campaña</p>
           <ReactQuill
             className="quill-editor"
-            value={description}
+            value= {description}
             onChange={handleDescripcionChange}
             placeholder="Describa la campaña"
           />
         </div>
 
        {/* META */}
-<div>
-  <p className="subtitulo">Rango Meta</p>
-  <input
-    className="entrada"
-    type="number"
-    value={meta}
-    onChange={handleRangoMetaChange}
-    placeholder="Ingrese el monto en pesos chilenos"
-  />
-</div>
+        <div>
+          <p className="subtitulo">Rango Meta</p>
+          <input
+            className="entrada"
+            type="number"
+            value={meta}
+            onChange={handleRangoMetaChange}
+            placeholder="Ingrese el monto en pesos chilenos"
+          />
+        
+        </div>
         {/* CUENTA */}
         <div>
           <p className="subtitulo" onClick={toggleOpcionesCuenta}>
@@ -186,21 +189,21 @@ function CreateCampaign() {
               </div>
 
               {/* Tipo de Cuenta */}
-<div>
-  <p className="subtitulo">Tipo de Cuenta</p>
-  <select
-    className="entrada"
-    value={tipoCuenta}
-    onChange={handleTipoCuentaChange}
-  >
-    <option value="" disabled defaultValue>
-      Seleccione un tipo de cuenta
-    </option>
-    <option value="cuentaVista">Cuenta Vista</option>
-    <option value="cuentaCorriente">Cuenta Corriente</option>
-    <option value="cuentaRUT">Cuenta Rut</option>
-  </select>
-</div>
+              <div>
+                <p className="subtitulo">Tipo de Cuenta</p>
+                <select
+                  className="entrada"
+                  value={tipoCuenta}
+                  onChange={handleTipoCuentaChange}
+                >
+                  <option value="" disabled defaultValue>
+                    Seleccione un tipo de cuenta
+                  </option>
+                  <option value="cuentaVista">Cuenta Vista</option>
+                  <option value="cuentaCorriente">Cuenta Corriente</option>
+                  <option value="cuentaRUT">Cuenta Rut</option>
+                </select>
+              </div>
 
               {/* Número de Cuenta */}
               <div>

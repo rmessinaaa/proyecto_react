@@ -2,7 +2,6 @@ import React from 'react';
 import VistaCampañas from '../vista-campañas/vista-campañas';
 import { Link } from "react-router-dom";
 
-
 function Pagina_Tus_Campañas() {
     return(
         <div className='container-fluid'>
@@ -30,4 +29,5 @@ function Pagina_Tus_Campañas() {
         </div>
     )
 }
+
 export default Pagina_Tus_Campañas; 
