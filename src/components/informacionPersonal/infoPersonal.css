@@ -1,75 +1,140 @@
-
-
-/* Estilos generales */
 .contenedor {
-    margin: 50px auto;
-    max-width: 570px;
-    border: 1px solid #0f3240;
-    background-color: #0597f2;
-    border-radius: 15px;
-    box-shadow: 0px 1px 1px 1px rgb(0 0 0 / 20%);
-    padding: 15px;
-    transition: transform 0.2s ease-in-out;
-    text-align: center;
-    color: white;
-  }
-  
-  .contenedor:hover {
-    transform: scale(1);
-  }
-  
-  .titulo {
-    font-size: 1.2em;
-    color: white;
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-  }
-  
-  .formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  
-  
-  
-  .contrasena-container {
-    display: flex;
-    align-items: center;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  background: linear-gradient(to top, #0597f2 20%, #f3f3f3 50%);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, .5); /* fondo relleno*/
 
-  
+}
 
-  
-  .boton-nicole-lo{
-    background-color: #00293A;
-    outline: none;
-    border: solid 2px #f2f2f2;
-    border-radius: 20px;
-    padding: 10px 20px;
-    color: #d6eaef;
-  
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .boton-nicole-lo:hover {
-    background-color: #f2f2f2;
-    border: solid 2px #00293A;
-    color: #00293A;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-  }
+.titulo {
+  font-size: 1 rem;
+  color: black;
+}
+.titulo h2 {
+  font-size: 2.5rem;
+  color: black;
+}
 
-  .edit-button {
-    background-color: #0fa8ea;
-    outline: none;
-    border: solid 2px #f2f2f2;
-    border-radius: 20px;
-    padding: 10px 20px;
-    color: #d6eaef;
+.titulo p {
+  margin: 15px 0;
+  color: black;
+}
+
+
+/* Estilos para el formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para las etiquetas y campos de entrada */
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.edit-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background-color: aliceblue;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+}
+
+/* Estilos para los botones */
+.edit-button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.edit-button {
+  background-color: whitesmoke;
+  outline: none;
+  border: solid 2px #00293A;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #00293A;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  margin-top: -8px;
+}
+
+/* Estilos específicos para el botón de actualizar */
+.boton-nicole-lo {
+  background-color: #00293A;
+  color: #d6eaef;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-nicole-lo:hover {
+  background-color: #00576e;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+
+
+/* Establece la posición del contenedor como relativa */
+.mostrar {
+  position: relative;
   
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+}
+
+/* Establece el icono con una posición absoluta */
+.mostrar-1{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #0F3240;
+}
+
+/* Establece el relleno dentro del campo de entrada */
+input[type="password"] {
+  padding-right: 30px;
+}
+
+.boton-nicole-lo{
+  background-color: #00293A;
+  outline: none;
+  border: solid 2px #f2f2f2;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #dbebf1;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-nicole-lo:hover {
+  background-color: #f2f2f2;
+  border: solid 2px #00293A;
+  color: #00293A;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+}
