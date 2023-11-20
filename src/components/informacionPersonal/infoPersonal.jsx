@@ -1,91 +1,170 @@
-
 import React, { useState } from "react";
-import "./infoPersonal.css";
+import { useRef } from "react";
+import { useForm } from "react-hook-form";
+import "./infoPersonal.css"; // Ajusta el nombre según tu archivo de estilos
 
-function InfoPersonal() {
-  const [nombre, setNombre] = useState("");
-  const [mail, setMail] = useState("");
-  const [contrasena, setContrasena] = useState("");
-  const [mostrarContrasena, setMostrarContrasena] = useState(false);
+function Formulario() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+    setValue,
+    reset,
+  } = useForm({
+    defaultValues: {
+      nombre: "",
+      correo: "",
+      password: "",
+      confirmarPassword: "",
+      aceptaTerminos: false,
+    },
+  });
 
-  const handleNombreChange = (event) => {
-    setNombre(event.target.value);
+  const [editMode, setEditMode] = useState(false);
+  const password = useRef(null);
+  password.current = watch("password", "");
+
+  const toggleEditMode = () => {
+    setEditMode(!editMode);
   };
 
-  const handleMailChange = (event) => {
-    setMail(event.target.value);
-  };
-
-  const handleContrasenaChange = (event) => {
-    setContrasena(event.target.value);
-  };
-
-  const toggleMostrarContrasena = () => {
-    setMostrarContrasena(!mostrarContrasena);
-  };
-
-  const limpiarCampos = () => {
-    setNombre("");
-    setMail("");
-    setContrasena("");
-  };
+  const onSubmit = handleSubmit((data) => {
+    console.log("Datos enviados:", data);
+    // Puedes manejar aquí la lógica para actualizar los datos en tu aplicación
+    // reset(); // Descomenta esta línea si deseas limpiar los campos después de enviar
+  });
 
   return (
-    <div className="contenedor">
-      <h1 className="titulo">Información Personal</h1>
-      
-      <div className="formulario">
-        <div className="campo">
-          <label className="subtitulo">Nombre de Usuario</label>
-          <input
-            className="entrada"
-            type="text"
-            value={nombre}
-            onChange={handleNombreChange}
-            placeholder="Ingrese su nombre de usuario"
-          />
-        </div>
-
-        <div className="campo">
-          <label className="subtitulo">Correo Electrónico</label>
-          <input
-            className="entrada"
-            type="text"
-            value={mail}
-            onChange={handleMailChange}
-            placeholder="Ingrese su dirección de correo electrónico"
-          />
-        </div>
-
-        <div className="campo">
-          <label className="subtitulo">Contraseña</label>
-          <div className="contrasena-container">
-            <input
-              className="entrada"
-              type={mostrarContrasena ? "text" : "password"}
-              value={contrasena}
-              onChange={handleContrasenaChange}
-              placeholder="Ingrese su contraseña"
-            />
-            <button
-              className="boton boton-mostrar"
-              type="button"
-              onClick={toggleMostrarContrasena}
-            >
-              {mostrarContrasena ? "Ocultar" : "Mostrar"}
-            </button>
-          </div>
+    <div className="container-form">
+      <div className="information">
+        <div className="info-childs">
+          <h2>{editMode ? "Edita tus datos" : "Tus datos"}</h2>
+          <p>{editMode ? "Actualiza tu perfil" : "Información actual"}</p>
+          <button className="edit-button" onClick={toggleEditMode}>
+            {editMode ? "Guardar" : "Editar"}
+            <span role="img" aria-label="lapiz">
+              ✏️
+            </span>
+          </button>
         </div>
       </div>
+      <div className="form-information">
+        <div className="form-information-childs">
+          <form className="form" onSubmit={onSubmit}>
+            <label>
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Elige un nombre de usuario"
+                {...register("nombre", {
+                  required: {
+                    value: true,
+                    message: "Nombre es requerido",
+                  },
+                  maxLength: 20,
+                  minLength: 2,
+                  readOnly: !editMode, // Campo de solo lectura cuando no está en modo de edición
+                })}
+              />
+            </label>
+            {errors.nombre?.type === "required" && <span>Nombre requerido</span>}
+            {errors.nombre?.type === "maxLength" && (
+              <span>Nombre no debe ser mayor a 20 caracteres</span>
+            )}
+            {errors.nombre?.type === "minLength" && (
+              <span>Nombre debe ser mayor a 2 caracteres</span>
+            )}
 
-      <div className="botones-container">
-        <button className="boton" onClick={limpiarCampos}>
-          Cambiar Datos
-        </button>
-        <button className="boton enviar">Enviar</button>
+            <label>
+              <input
+                type="email"
+                name="correo"
+                placeholder="Correo electronico"
+                {...register("correo", {
+                  required: {
+                    value: true,
+                    message: "Correo es requerido",
+                  },
+                  pattern: {
+                    value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                    message: "Correo no válido",
+                  },
+                  readOnly: !editMode,
+                })}
+              />
+            </label>
+            {errors.correo && <span>{errors.correo.message}</span>}
+
+            <label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                {...register("password", {
+                  required: {
+                    value: true,
+                    message: "Contraseña es requerida",
+                  },
+                  minLength: {
+                    value: 6,
+                    message: "Contraseña debe ser mayor a 6 caracteres",
+                  },
+                  readOnly: !editMode,
+                })}
+              />
+            </label>
+            {errors.password && <span>{errors.password.message}</span>}
+
+            <label>
+              <input
+                type="password"
+                name="confirmarPassword"
+                placeholder="Confirma tu contraseña"
+                {...register("confirmarPassword", {
+                  required: {
+                    value: true,
+                    message: "Confirmar contraseña es requerida",
+                  },
+                  minLength: {
+                    value: 6,
+                    message: "Confirmar contraseña debe ser mayor a 6 caracteres",
+                  },
+                  validate: (value) =>
+                    value === password.current || "Las contraseñas no coinciden",
+                  readOnly: !editMode,
+                })}
+              />
+            </label>
+            {errors.confirmarPassword && (
+              <span>{errors.confirmarPassword.message}</span>
+            )}
+
+            <label>
+              <input
+                type="checkbox"
+                name="aceptaTerminos"
+                {...register("aceptaTerminos", {
+                  required: {
+                    value: true,
+                  },
+                  readOnly: !editMode,
+                })}
+              />
+              Acepto los términos y condiciones
+            </label>
+            {errors.aceptaTerminos && (
+              <span>{errors.aceptaTerminos.message}</span>
+            )}
+
+            <button type="submit" className="boton-nicole-lo">
+              {editMode ? "Guardar" : "Actualizar"}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
 }
 
-export default InfoPersonal;
+export default Formulario;
