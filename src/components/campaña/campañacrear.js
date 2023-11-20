@@ -4,39 +4,39 @@ import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
 import "./campañacrear.css";
 
-function Campañacrear() {
+function CreateCampaign() {
   // Estados
-  const [nombre, setNombre] = useState("");
-  const [descripcion, setDescripcion] = useState("");
-  const [rangoMeta, setRangoMeta] = useState("");
-  const [cuenta, setCuenta] = useState("");
-  const [categoria, setCategoria] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [meta, setMeta] = useState("");
+  const [account, setAccount] = useState("");
+  const [category, setCategory] = useState("");
   const [foto, setFoto] = useState(null);
   const [banco, setBanco] = useState("");
   const [tipoCuenta, setTipoCuenta] = useState("");
   const [numeroCuenta, setNumeroCuenta] = useState("");
-  const [correoElectronico, setCorreoElectronico] = useState("");
+  const [email, setEmail] = useState("");
   const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
 
   // Manejadores de cambios
   const handleNombreChange = (event) => {
-    setNombre(event.target.value);
+    setTitle(event.target.value);
   };
 
   const handleDescripcionChange = (value) => {
-    setDescripcion(value);
+    setDescription(value);
   };
 
   const handleRangoMetaChange = (event) => {
-    setRangoMeta(event.target.value);
+    setMeta(event.target.value);
   };
 
   const handleCuentaChange = (event) => {
-    setCuenta(event.target.value);
+    setAccount(event.target.value);
   };
 
   const handleCategoriaChange = (event) => {
-    setCategoria(event.target.value);
+    setCategory(event.target.value);
   };
 
   const handleFotoChange = (event) => {
@@ -67,21 +67,21 @@ function Campañacrear() {
   };
 
   const handleCorreoElectronicoChange = (event) => {
-    setCorreoElectronico(event.target.value);
+    setEmail(event.target.value);
   };
 
   // Función para limpiar campos
   const limpiarCampos = () => {
-    setNombre("");
-    setDescripcion("");
-    setRangoMeta("");
-    setCuenta("");
-    setCategoria("");
+    setTitle("");
+    setDescription("");
+    setMeta("");
+    setAccount("");
+    setCategory("");
     setFoto(null);
     setBanco("");
     setTipoCuenta("");
     setNumeroCuenta("");
-    setCorreoElectronico("");
+    setEmail("");
   };
 
   // Función para manejar el clic en Mostrar/Ocultar opciones de cuenta
@@ -91,19 +91,35 @@ function Campañacrear() {
 
   // Función para manejar el envío del formulario
   const handleFormSubmit = () => {
+    if(!title || !description || !meta || !category || !banco || !tipoCuenta || !numeroCuenta || !email){
+      console.log("todos los campos son requeridos");
+      return 
+    }
     // Aquí puedes implementar la lógica para enviar los datos del formulario
-    console.log("Datos del formulario:", {
-      nombre,
-      descripcion,
-      rangoMeta,
-      cuenta,
-      categoria,
-      foto,
+    const formulario = {
+      title,
+      description,
+      meta,
+      category,
       banco,
       tipoCuenta,
       numeroCuenta,
-      correoElectronico,
-    });
+      email,
+    };
+    const token = window.localStorage.getItem("token");
+    fetch("http://localhost:8080/api/campanas", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        credentials : 'include',
+        acces_token: token
+      },
+      body: JSON.stringify(formulario)
+    })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    
+    
   };
 
   return (
@@ -117,7 +133,7 @@ function Campañacrear() {
           <input
             className="entrada"
             type="text"
-            value={nombre}
+            value={title}
             onChange={handleNombreChange}
             placeholder="Ingrese su nombre de campaña"
           />
@@ -128,7 +144,7 @@ function Campañacrear() {
           <p className="subtitulo">Descripción de campaña</p>
           <ReactQuill
             className="quill-editor"
-            value={descripcion}
+            value={description}
             onChange={handleDescripcionChange}
             placeholder="Describa la campaña"
           />
@@ -140,7 +156,7 @@ function Campañacrear() {
   <input
     className="entrada"
     type="number"
-    value={rangoMeta}
+    value={meta}
     onChange={handleRangoMetaChange}
     placeholder="Ingrese el monto en pesos chilenos"
   />
@@ -205,7 +221,7 @@ function Campañacrear() {
                 <input
                   className="entrada"
                   type="email"
-                  value={correoElectronico}
+                  value={email}
                   onChange={handleCorreoElectronicoChange}
                   placeholder="Ingrese su correo electrónico"
                 />
@@ -219,7 +235,7 @@ function Campañacrear() {
           <p className="subtitulo">Categoría</p>
           <select
             className="entrada"
-            value={categoria}
+            value={category}
             onChange={handleCategoriaChange}
           >
             <option value="" disabled defaultValue>
@@ -276,4 +292,4 @@ function Campañacrear() {
   );
 }
 
-export default Campañacrear;
+export default CreateCampaign;
