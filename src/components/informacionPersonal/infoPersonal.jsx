@@ -1,91 +1,103 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import "./infoPersonal.css"
 
-import React, { useState } from "react";
-import "./infoPersonal.css";
+const EditarPerfil = (props) => {
+  const {username, email, password} = props
+  const [usuario, setUsuario] = useState({
+    nombreUsuario: username,
+    correo: email,
+    contrasena: password,
 
-function InfoPersonal() {
-  const [nombre, setNombre] = useState("");
-  const [mail, setMail] = useState("");
-  const [contrasena, setContrasena] = useState("");
+  });
+
   const [mostrarContrasena, setMostrarContrasena] = useState(false);
 
-  const handleNombreChange = (event) => {
-    setNombre(event.target.value);
-  };
-
-  const handleMailChange = (event) => {
-    setMail(event.target.value);
-  };
-
-  const handleContrasenaChange = (event) => {
-    setContrasena(event.target.value);
-  };
-
-  const toggleMostrarContrasena = () => {
+  const handleMostrarContrasena = () => {
     setMostrarContrasena(!mostrarContrasena);
   };
 
-  const limpiarCampos = () => {
-    setNombre("");
-    setMail("");
-    setContrasena("");
+  const handleEditarCampo = (campo) => {
+    setUsuario((prevUsuario) => ({
+      ...prevUsuario,
+      [campo]: '',
+    }));
+  };
+
+  const handleActualizar = (e) => {
+    e.preventDefault();
+    // Aquí puedes enviar los datos actualizados al servidor o realizar otras acciones
+    console.log('Datos actualizados:', usuario);
   };
 
   return (
     <div className="contenedor">
-      <h1 className="titulo">Información Personal</h1>
-      
-      <div className="formulario">
-        <div className="campo">
-          <label className="subtitulo">Nombre de Usuario</label>
-          <input
-            className="entrada"
-            type="text"
-            value={nombre}
-            onChange={handleNombreChange}
-            placeholder="Ingrese su nombre de usuario"
-          />
-        </div>
+      <div className="titulo">
+          <h2>Actualiza tus datos</h2>
+          <p>
+          🤝 Edita tu perfil y deja que tu compromiso brille en cada detalle.
 
-        <div className="campo">
-          <label className="subtitulo">Correo Electrónico</label>
-          <input
-            className="entrada"
-            type="text"
-            value={mail}
-            onChange={handleMailChange}
-            placeholder="Ingrese su dirección de correo electrónico"
-          />
-        </div>
-
-        <div className="campo">
-          <label className="subtitulo">Contraseña</label>
-          <div className="contrasena-container">
+<br />
+          </p>
+          </div>
+      <form className="formulario" onSubmit={handleActualizar}>
+        <label>
+          Nombre de Usuario:
+          <div className="edit-button-container">
             <input
-              className="entrada"
-              type={mostrarContrasena ? "text" : "password"}
-              value={contrasena}
-              onChange={handleContrasenaChange}
-              placeholder="Ingrese su contraseña"
+              type="text" readOnly 
+              value={usuario.nombreUsuario}
+              onChange={(e) => setUsuario({ ...usuario, nombreUsuario: e.target.value })}
+              className="edit-input"
             />
-            <button
-              className="boton boton-mostrar"
-              type="button"
-              onClick={toggleMostrarContrasena}
-            >
-              {mostrarContrasena ? "Ocultar" : "Mostrar"}
+            <button type="button" className="edit-button" onClick={() => handleEditarCampo('nombreUsuario')}>
+              ✏️
             </button>
           </div>
-        </div>
-      </div>
+        </label>
 
-      <div className="botones-container">
-        <button className="boton" onClick={limpiarCampos}>
-          Cambiar Datos
+        <br />
+
+        <label>
+          Correo:
+          <div className="edit-button-container">
+            <input 
+              type="email" readOnly
+              value={usuario.correo}
+              onChange={(e) => setUsuario({ ...usuario, correo: e.target.value })}
+              className="edit-input"
+            />
+            <button type="button" className="edit-button" onClick={() => handleEditarCampo('correo')}>
+              ✏️
+            </button>
+          </div>
+        </label>
+
+        <br />
+
+        <label>
+          Contraseña:
+          <div className="edit-button-container contrasena-container">
+            <input readOnly
+              type={mostrarContrasena ? 'text' : 'password'}
+              value={usuario.contrasena}
+              onChange={(e) => setUsuario({ ...usuario, contrasena: e.target.value })}
+              className="edit-input"
+            />
+           <button type="button" className="edit-button" onClick={() => handleEditarCampo('correo')}> 
+           ✏️
+           </button>
+          </div>
+        </label>
+
+        <br />
+
+        <button type="submit" className="boton-nicole-lo">
+          Actualizar
         </button>
-        <button className="boton enviar">Enviar</button>
-      </div>
+      </form>
     </div>
   );
-}
+};
 
-export default InfoPersonal;
+export default EditarPerfil;

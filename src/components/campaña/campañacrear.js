@@ -16,8 +16,31 @@ function CreateCampaign() {
   const [accountNum, setAccountNum] = useState("");
   const [email, setEmail] = useState("");
   const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
+<<<<<<< HEAD
   const [filename, setFileName] = useState(null);
+=======
+  const regiones = [
+    "Región de Arica y Parinacota",
+    "Región de Tarapacá",
+    "Región de Antofagasta",
+    "Región de Atacama",
+    "Región de Coquimbo",
+    "Región de Valparaíso",
+    "Región Metropolitana",
+    "Región del Libertador General Bernardo O'Higgins",
+    "Región del Maule",
+    "Región de Ñuble",
+    "Región del Biobío",
+    "Región de La Araucanía",
+    "Región de Los Ríos",
+    "Región de Los Lagos",
+    "Región de Aysén del General Carlos Ibáñez del Campo",
+    "Región de Magallanes y de la Antártica Chilena",
+  ];
+>>>>>>> abdca251c7b9958e7932411d7e28b90eed281261
 
+  //Función para que no se vean las <p> en la descripción
+  
   // Manejadores de cambios
   const handleNombreChange = (event) => {
     setTitle(event.target.value);
@@ -26,6 +49,13 @@ function CreateCampaign() {
   const handleDescripcionChange = (value) => {
     setDescription(value);
   };
+
+  const [region, setRegion] = useState("");
+
+  const handleRegionChange = (event) => {
+  setRegion(event.target.value);
+  };
+
 
   const handleRangoMetaChange = (event) => {
     setMeta(event.target.value);
@@ -158,29 +188,53 @@ function CreateCampaign() {
             placeholder="Ingrese su nombre de campaña"
           />
         </div>
-
+        
         {/* Descripción */}
         <div>
           <p className="subtitulo">Descripción de campaña</p>
           <ReactQuill
             className="quill-editor"
-            value={description}
+            value= {description}
             onChange={handleDescripcionChange}
             placeholder="Describa la campaña"
           />
         </div>
 
-       {/* META */}
+
+        {/* Regiones */}
 <div>
-  <p className="subtitulo">Rango Meta</p>
-  <input
+  <p className="subtitulo">Región</p>
+  <select
     className="entrada"
-    type="number"
-    value={meta}
-    onChange={handleRangoMetaChange}
-    placeholder="Ingrese el monto en pesos chilenos"
-  />
+    value={region}
+    onChange={handleRegionChange}
+  >
+    <option value="" disabled defaultValue>
+      Seleccione una región
+    </option>
+    {regiones.map((region, index) => (
+      <option key={index} value={region}>
+        {region}
+      </option>
+    ))}
+  </select>
 </div>
+
+
+
+
+       {/* META */}
+        <div>
+          <p className="subtitulo">Rango Meta</p>
+          <input
+            className="entrada"
+            type="number"
+            value={meta}
+            onChange={handleRangoMetaChange}
+            placeholder="Ingrese el monto en pesos chilenos"
+          />
+        
+        </div>
         {/* CUENTA */}
         <div>
           <p className="subtitulo" onClick={toggleOpcionesCuenta}>
@@ -206,6 +260,7 @@ function CreateCampaign() {
               </div>
 
               {/* Tipo de Cuenta */}
+<<<<<<< HEAD
 <div>
   <p className="subtitulo">Tipo de Cuenta</p>
   <select
@@ -221,6 +276,23 @@ function CreateCampaign() {
     <option value="Cuenta RUT">Cuenta Rut</option>
   </select>
 </div>
+=======
+              <div>
+                <p className="subtitulo">Tipo de Cuenta</p>
+                <select
+                  className="entrada"
+                  value={tipoCuenta}
+                  onChange={handleTipoCuentaChange}
+                >
+                  <option value="" disabled defaultValue>
+                    Seleccione un tipo de cuenta
+                  </option>
+                  <option value="cuentaVista">Cuenta Vista</option>
+                  <option value="cuentaCorriente">Cuenta Corriente</option>
+                  <option value="cuentaRUT">Cuenta Rut</option>
+                </select>
+              </div>
+>>>>>>> abdca251c7b9958e7932411d7e28b90eed281261
 
               {/* Número de Cuenta */}
               <div>

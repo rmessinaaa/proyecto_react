@@ -48,6 +48,8 @@ function Perfil() {
 
   return (
     <div className='container perfil-container'>
+      <h1> Sube tu imagen de perfil</h1>
+      <p> ¡Únete a la causa y haz tu perfil aún más especial! Anima a otros con tu foto de perfil en nuestra plataforma de voluntariado. ¡Sube una imagen ahora y comparte tu espíritu solidario! 🌟 📸✨</p>
       <div
         className='imagen-container'
         style={{
@@ -71,18 +73,13 @@ function Perfil() {
         <label htmlFor='seleccionar-imagen' className='boton-accion cambiar-foto'>
           Cambiar foto de perfil
         </label>
-        <div className='boton-accion cambiar-posicion' onClick={handleChangePosicion}>
-          Cambiar Posición
-        </div>
-        <div className='boton-accion aumentar-tamano' onClick={() => handleTamano(10)}>
-          Aumentar Tamaño
-        </div>
-        <div className='boton-accion disminuir-tamano' onClick={() => handleTamano(-10)}>
-          Disminuir Tamaño
-        </div>
+        <br></br>
+       
         <div className='boton-accion guardar-imagen' onClick={handleGuardarImagen}>
           Guardar Imagen de Perfil
         </div>
+        <br></br>
+        <br></br>
       </div>
     </div>
   );

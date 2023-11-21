@@ -146,9 +146,9 @@ const IniciarSesion = () => {
             <p>Únete a nuestra causa y haz la diferencia</p>
           </div>
         </div>
-        <div className='container-fluid div-dos'>
+        {/* <div className='container-fluid div-dos'>
           <button className='boton-g'>Iniciar sesión con Google</button>
-        </div>
+        </div> */}
         <div className='container-fluid'>
           <div className='div-linea2'>
             <div class="linea-con-letra">

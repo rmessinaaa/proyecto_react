@@ -1,59 +1,82 @@
+
+/* webpay.css */
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Cambia el color de fondo según tus preferencias */
+  font-family: 'Montserrat', sans-serif; /* Agrega la fuente Montserrat */
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+/* Estilos del contenedor de filtro */
 .container-filtro {
-    background-color: #0597f2;
-    border: 1px solid #e0e0e0;
-    border-radius: 29px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    width: 100%;
-    margin: 20px auto;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .filtro-section {
-    margin-bottom: 20px;
-  }
-  
-  .titulo {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #ffffff;
-  }
-  
-  .subtitulo {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #fefefe;
-  }
-  
-  .opciones {
-    width: 100%;
-  }
-  
-  hr {
-    margin: 15px 0;
-    border: none;
-    border-top: 1px solid #ddd;
-  }
-  
-  .botones-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .boton {
-    background-color: #4caf50;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .boton:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-  }
-  
+  background: linear-gradient(to top, #0597f2 22%, #f3f3f3 50%);
+  border: 1px solid #e0e0e0;
+  border-radius: 29px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  transition: box-shadow 0.5s ease;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilos de la sección de filtro */
+.filtro-section {
+  margin-bottom: 20px;
+}
+
+/* Estilos del título */
+.titulo {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: normal; /* Elimina la negrita del título */
+}
+
+/* Estilos del subtítulo */
+.subtitulo {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #fefefe;
+  font-weight: normal; /* Elimina la negrita del subtítulo */
+}
+
+/* Estilos de las opciones */
+.opciones {
+  width: 100%;
+}
+
+/* Estilos de la línea horizontal */
+hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Estilos del contenedor de botones */
+.botones-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilos del botón */
+.boton {
+  background-color: #4caf50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilos del botón al pasar el mouse */
+.boton:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
