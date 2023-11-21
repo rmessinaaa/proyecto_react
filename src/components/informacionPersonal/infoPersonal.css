@@ -1,14 +1,14 @@
 .contenedor {
   display: flex;
+  justify-content: center; /* Cambiado a "center" para centrar en la pantalla */
   align-items: center;
-  justify-content: center;
-  width: 60%;
-  text-align: center;
+  flex-direction: column;
+  margin: 20px auto; /* Cambiado para centrar y ajustar automáticamente los márgenes laterales */
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
   background: linear-gradient(to top, #0597f2 20%, #f3f3f3 50%);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0 5px 7px rgba(0, 0, 0, .5); /* fondo relleno*/
-
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;text-align: center;
+margin-bottom: 20px;
 }
 
 .titulo {
@@ -27,19 +27,9 @@
 
 
 /* Estilos para el formulario */
-.formulario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 /* Estilos para las etiquetas y campos de entrada */
-label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px;
-}
+
 
 .edit-input {
   width: 100%;
@@ -91,12 +81,6 @@ label {
   background-color: #00576e;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px;
-}
 
 
 

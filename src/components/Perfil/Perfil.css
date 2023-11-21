@@ -7,8 +7,13 @@
   flex-direction: column;
   margin: 20px auto; /* Cambiado para centrar y ajustar automáticamente los márgenes laterales */
   max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  background: linear-gradient(to top, #0597f2 20%, #f3f3f3 50%);
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+box-shadow: 0 5px 7px rgba(0, 0, 0, .5); /* fondo relleno*/
+text-align: center;
+margin-bottom: 20px;
 }
-
 .imagen-container {
   width: 320px;
   height: 300px;
@@ -32,19 +37,22 @@
 }
 
 .boton-accion {
-  padding: 10px;
-  margin: 5px;
+  background-color: whitesmoke;
+  outline: none;
+  border: solid 2px #00293A;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #00293A;
   cursor: pointer;
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
   transition: background-color 0.3s ease;
+  margin-left: 10px;
+  margin-top: -8px;
 }
 
+
 .boton-accion:hover {
-  background-color: #0056b3;
+  background-color: #071524;
+  color: white;
 }
 
 /* Estilos adicionales según necesidades */

@@ -33,8 +33,9 @@ const EditarPerfil = () => {
       <div className="titulo">
           <h2>Actualiza tus datos</h2>
           <p>
-            Edita tu perfil 
-            <br />
+          🤝 Edita tu perfil y deja que tu compromiso brille en cada detalle.
+
+<br />
           </p>
           </div>
       <form className="formulario" onSubmit={handleActualizar}>
