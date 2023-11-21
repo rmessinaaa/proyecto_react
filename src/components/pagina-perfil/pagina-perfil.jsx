@@ -17,7 +17,7 @@ function PaginaPerfil() {
         </div>
       </div>
       <div className="row">
-        <div className="col ">">
+        <div className="col ">
           <Perfil />
         </div>
         <div className="col >">

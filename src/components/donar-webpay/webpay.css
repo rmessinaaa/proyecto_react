@@ -1,0 +1,72 @@
+
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Cambia el color de fondo según tus preferencias */
+  font-family: 'Montserrat', sans-serif; /* Agrega la fuente Montserrat */
+  color: #000; /* Cambia el color del texto a negro */
+}
+
+/* Estilos de la tarjeta de donación */
+.container .card-donacion {
+  background: linear-gradient(to top, #0597f2 10%, #f3f3f3 50%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.container .titulo-secundario-blanco {
+  color: #07090aa4; /* Azul Bootstrap */
+}
+
+.container .monto-donacion {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.container .button-azul {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.container .button-azul:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+.container .modal-content {
+  border-radius: 50px;
+}
+
+.container .imagen-donacion {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.container .descripcion-donacion p {
+  color: #07090aa4;
+}
+
+.container .historial-donaciones {
+  margin-top: 20px;
+}
+
+.container .historial-donaciones h3 {
+  color: #07090aa4;
+}
+
+.container .historial-donaciones ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container .historial-donaciones li {
+  margin-bottom: 5px;
+  color: #07090ad3;
+}

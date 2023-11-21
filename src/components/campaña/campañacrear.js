@@ -17,6 +17,24 @@ function CreateCampaign() {
   const [numeroCuenta, setNumeroCuenta] = useState("");
   const [email, setEmail] = useState("");
   const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
+  const regiones = [
+    "Región de Arica y Parinacota",
+    "Región de Tarapacá",
+    "Región de Antofagasta",
+    "Región de Atacama",
+    "Región de Coquimbo",
+    "Región de Valparaíso",
+    "Región Metropolitana",
+    "Región del Libertador General Bernardo O'Higgins",
+    "Región del Maule",
+    "Región de Ñuble",
+    "Región del Biobío",
+    "Región de La Araucanía",
+    "Región de Los Ríos",
+    "Región de Los Lagos",
+    "Región de Aysén del General Carlos Ibáñez del Campo",
+    "Región de Magallanes y de la Antártica Chilena",
+  ];
 
   // Manejadores de cambios
   const handleNombreChange = (event) => {
@@ -26,6 +44,13 @@ function CreateCampaign() {
   const handleDescripcionChange = (value) => {
     setDescription(value);
   };
+
+  const [region, setRegion] = useState("");
+
+  const handleRegionChange = (event) => {
+  setRegion(event.target.value);
+  };
+
 
   const handleRangoMetaChange = (event) => {
     setMeta(event.target.value);
@@ -149,6 +174,29 @@ function CreateCampaign() {
             placeholder="Describa la campaña"
           />
         </div>
+
+
+        {/* Regiones */}
+<div>
+  <p className="subtitulo">Región</p>
+  <select
+    className="entrada"
+    value={region}
+    onChange={handleRegionChange}
+  >
+    <option value="" disabled defaultValue>
+      Seleccione una región
+    </option>
+    {regiones.map((region, index) => (
+      <option key={index} value={region}>
+        {region}
+      </option>
+    ))}
+  </select>
+</div>
+
+
+
 
        {/* META */}
 <div>

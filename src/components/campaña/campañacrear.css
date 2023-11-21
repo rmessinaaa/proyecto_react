@@ -26,18 +26,20 @@
   font-size: 1.2em;
   text-align: center;
   padding-top: 0.2em;
-  color: white;
+  color: rgb(5, 5, 5);
   margin-top: 0.3em;
   margin-bottom: 0.5em;
+  font-weight: bold;
 }
 
 /* Estilos para subtítulos */
 .subtitulo {
   margin-top: 0.5em;
   margin-bottom: 0.3em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: white;
+  font-family: 'Monserrart';
+  color: rgb(0, 0, 0);
   padding: 0.5%;
+  font-weight: bold;
 }
 
 /* Estilos del formulario */
@@ -63,8 +65,9 @@
   padding: 8px;
   outline: #1ed9d9;
   box-sizing: border-box;
+  color: #333; /* Cambia el color del texto según tus preferencias */
+  background-color: white; /* Asegúrate de que el fondo sea visible */
 }
-
 /* Estilos de los botones */
 .boton {
   width: 100%;
@@ -146,4 +149,8 @@
 /* Ajuste del botón de reiniciar y enviar */
 .boton-div {
   width: 48%;
+}
+
+.ql-container {
+  color: #333; /* Cambia el color del texto según tus preferencias */
 }
