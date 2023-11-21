@@ -1,47 +1,80 @@
 
+import React, { useState } from 'react';
+import './webpay.css';
 
-import React from 'react';
-
-// Componente para el título de la donación
 function TituloDonacion() {
-  const tituloStyle = {
-    color: 'white', 
-    textAlign: 'center',
-    marginTop: '2.5rem', 
-  };
-  return <h2 style={tituloStyle}>Haz tu donación</h2>;
+  return <h2 className="titulo-secundario-blanco">Haz tu donación</h2>;
 }
+
 // Componente para el campo de monto de donación
-function MontoDonacion() {
-  const inputStyle = {
-    width: '77%', 
-    borderTopLeftRadius: '12px', 
-    borderTopRightRadius: '12px',
-    margin: '0 auto', 
+function MontoDonacion({ onDonar }) {
+  const [monto, setMonto] = useState('');
+
+  const handleInputChange = (e) => {
+    // solo numeros
+    const nuevoMonto = e.target.value.replace(/\D/g, '');
+    setMonto(nuevoMonto);
+  };
+
+  const handleDonar = () => {
+    if (monto) {
+      onDonar(parseInt(monto, 10));
+      setMonto('');
+    }
   };
 
   return (
     <div className="text-center my-4">
-      <input type="number" className="form-control" style={inputStyle} placeholder="Monto de la donación" />
+      <input
+        type="text"
+        className="form-control monto-donacion"
+        placeholder="Monto de la donación"
+        value={monto !== '' ? `$${parseInt(monto, 10).toLocaleString('es-CL')}` : ''}
+        onChange={handleInputChange}
+      />
+      <div className="text-center my-4">
+        <button className="btn btn-primary button-azul" onClick={handleDonar} data-bs-toggle="modal" data-bs-target="#donarModal">
+          DONAR
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// Componente para el modal de información bancaria
+function DonarModal() {
+  return (
+    <div className="modal fade" id="donarModal" tabIndex="-1" aria-labelledby="donarModalLabel" aria-hidden="true">
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="donarModalLabel">Información bancaria para poder donar</h5>
+            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div className="modal-body">
+            {/* Aquí puedes mostrar la información bancaria de la base de datos */}
+            <p>Banco: </p>
+            <p>Tipo de cuenta: </p>
+            <p>Número de cuenta: XXXX-XXXX-XXXX-XXXX</p>
+            <p>Correo Electrónico:</p>
+            {/* Otros detalles de la información bancaria */}
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
 // Componente para la imagen de donación
 function ImagenDonacion() {
-  const imageStyle = {
-    width: '50%', 
-    border: '2px solid transparent', 
-    borderRadius: '20px', 
-    margin: '0 auto', 
-  };
-
   return (
     <div className="text-center my-4">
       <img
-        src="/imagenes-campaña/webpay.png"
-        className="img-fluid"
-        style={imageStyle}
+        src="/ilustraciones/Donar.png"
+        className="img-fluid imagen-donacion"
         alt="Imagen de donación"
       />
     </div>
@@ -50,62 +83,56 @@ function ImagenDonacion() {
 
 // Componente para la descripción de la donación y botón de donar
 function DescripcionDonacion() {
-  const containerStyle = {
-    textAlign: 'center', 
-  };
-
-  const paragraphStyle = {
-    textAlign: 'left',
-    marginLeft: '0', 
-    marginBottom: '20px', 
-    color: 'white', 
-  };
-
-  const buttonStyle = {
-    fontSize: '0.9em',
-    fontWeight: 'bold',
-    backgroundColor: '#333', 
-    color: 'white',
-    borderRadius: '50px',
-    padding: '5px 30px', 
-    display: 'block', 
-  };
-
   return (
-    <div className="col-md-6" style={containerStyle}>
-      <p className="my-4" style={paragraphStyle}>
-        Realiza tu donación a través del sistema Webpay de forma rápida y segura.
+    <div className="col-md-6 descripcion-donacion">
+      <p className="my-4 parrafo-blanco">
+      Únete a nosotros y realiza 
+      tu donación para apoyar esta causa crucial. Tu contribución marcará la diferencia y será un paso 
+      significativo. Con tu generosidad,
+       estamos construyendo un futuro mejor y más esperanzador ¡Cada aporte cuenta y nos acerca más a lograr nuestro objetivo común! ¡Gracias por ser parte de este movimiento solidario y hacer que el cambio suceda!
       </p>
-      <div className="text-center my-4">
-        <button className="btn btn-primary" style={buttonStyle}>
-         DONAR
-        </button>
-      </div>
     </div>
   );
 }
 
+// Componente para el historial de donaciones
+function HistorialDonaciones({ historial }) {
+  return (
+    <div className="historial-donaciones">
+      <h3>Historial de Donaciones</h3>
+      <ul>
+        {historial.map((donacion, index) => (
+          <li key={index}>Donación: ${donacion.toLocaleString('es-CL')} CLP</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+// Componente principal
 function TarjetaDonacion() {
-  const cardStyle = {
-    backgroundColor: '#0597F2', 
-    borderRadius: '50px', 
+  const [historialDonaciones, setHistorialDonaciones] = useState([]);
+
+  const handleDonar = (monto) => {
+    setHistorialDonaciones([...historialDonaciones, monto]);
   };
 
   return (
     <div className="container centrar-contenido">
-      <div className="card border-rounded w-50 bg-custom mt-3 " style={cardStyle}>
+      <div className="card-donacion">
         <TituloDonacion />
-        <MontoDonacion />
+        <MontoDonacion onDonar={handleDonar} />
         <div className="row">
           <div className="col-md-6">
             <ImagenDonacion />
           </div>
           <DescripcionDonacion />
         </div>
+        <DonarModal />
+        <HistorialDonaciones historial={historialDonaciones} />
       </div>
     </div>
   );
 }
-
 
 export default TarjetaDonacion;
