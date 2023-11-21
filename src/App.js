@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Routes, useLocation, Navigate } from 'react-route
 import PaginaInicio from './components/pagina-inicio/pagina-inicio';
 import PaginaNosotros from './components/pagina-nosotros/pagina-nosotros';
 import PaginaBuscador from './components/pagina-buscador/PaginaBuscador'
-import PaginaDonaciones from './components/pagina-donaciones/pagina-donaciones'; 
 import PaginaPerfil from './components/pagina-perfil/pagina-perfil'; 
 import Navbar from './components/Navbar/Navbar';
 import Footer from "./components/Footer/Footer";
@@ -48,7 +47,6 @@ function Main() {
             <Route path='/' element={<PaginaInicio />} />
             <Route path='/nosotros' element={<PaginaNosotros />} /> 
             <Route path='/buscar' element={<PaginaBuscador />} />
-            <Route path='/donaciones' element={<PaginaDonaciones />} />
             <Route path='/perfil' element={<PaginaPerfil />} />
             <Route path='/ficha-campaña' element={<PaginaCampaña />} />
             <Route path='/tus-campañas' element={<Pagina_Tus_Campañas />} />
