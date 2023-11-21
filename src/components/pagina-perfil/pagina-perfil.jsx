@@ -6,7 +6,7 @@ import {useState, useEffect} from "react";
 // import SubsPerfilIntereses from '../subs-perfil-intereses/subs-perfil-intereses';
 
 function PaginaPerfil() {
-  const [data, setData] = useState([]);
+  const [data, setusuario] = useState([]);
   const [usuario, setUsuario] = useState([]);
   // const [username, setUsername] = useState([]);
   // const [email, setEmail] = useState([]);
@@ -19,11 +19,11 @@ function PaginaPerfil() {
  
 
   useEffect(() => {
-    setUsuario(data);
-    // setUsername(data.username);
-    // setPassword(data.password);
-    // setEmail(data.email);
-  }, [data])
+    setUsuario(usuario);
+    // setUsername(usuario.username);
+    // setPassword(usuario.password);
+    // setEmail(usuario.email);
+  }, [usuario])
   
   useEffect(() => {
     const id = window.localStorage.getItem("id")
@@ -38,14 +38,14 @@ function PaginaPerfil() {
       }
     })
     .then((res) => res.json())
-    .then((data) => setData(data))
+    .then((usuario) => setusuario(data))
     .catch((error) => {
       console.error('Error en la solicitud:', error);
     });
   }, []);
 
 
-console.log(data)
+console.log(usuario)
 
   return (
     <div className='bg-paginas bg-perfil'>
@@ -64,17 +64,14 @@ console.log(data)
         </div>
         <div className="col >">
           <div className='centrar-contenido'>
-            <EditarPerfil 
-            username = {username}
-            email = {email} 
-            />
-          {/* {usuario.map((userProfile) => (<EditarPerfil
-                      key={userProfile._id}
-                      username={userProfile.username}
-                      email={userProfile.email}
+            
+          {<EditarPerfil
+                      key={usuario._id}
+                      username={usuario.username}
+                      email={usuario.email}
                       password={userProfile.password}
             
-                    /> ))}  */}
+                    /> }
            
           </div>
         </div>
