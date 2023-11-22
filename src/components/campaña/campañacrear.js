@@ -261,7 +261,7 @@ function CreateCampaign() {
                 <p className="subtitulo">Tipo de Cuenta</p>
                 <select
                   className="entrada"
-                  value={tipoCuenta}
+                  value={accountType}
                   onChange={handleTipoCuentaChange}
                 >
                   <option value="" disabled defaultValue>

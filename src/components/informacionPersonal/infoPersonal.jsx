@@ -3,13 +3,46 @@ import { Link } from 'react-router-dom';
 import "./infoPersonal.css"
 
 const EditarPerfil = (props) => {
-  const {username, email, password} = props
+  const {username, email, password, rol} = props
   const [usuario, setUsuario] = useState({
     nombreUsuario: username,
     correo: email,
     contrasena: password,
-
+    rol: rol,
   });
+  const token = window.localStorage.getItem("token")
+  // const userUpdate = {
+  //   username,
+  //   email,
+  //   rol,
+  // }
+  const userUpdate = {
+    username: username,
+    email: email,
+    rol: rol,
+  };
+
+  function actualizarPerfil() {
+    const id = window.localStorage.getItem("id");
+    const idarreglado = id.replace(/['"]+/g, '');
+  
+    
+  
+    fetch(`http://localhost:8080/api/profile/${idarreglado}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        credentials: 'include',
+        acces_token: token,
+      },
+      body: JSON.stringify(userUpdate),
+    })
+      .then((res) => res.json())
+      .catch((error) => {
+        console.error('Error en la solicitud:', error);
+      });
+  }
+  
 
   const [mostrarContrasena, setMostrarContrasena] = useState(false);
 
@@ -45,9 +78,9 @@ const EditarPerfil = (props) => {
           Nombre de Usuario:
           <div className="edit-button-container">
             <input
-              type="text" readOnly 
+              type="text" 
               value={usuario.nombreUsuario}
-              onChange={(e) => setUsuario({ ...usuario, nombreUsuario: e.target.value })}
+              onChange={(e) => setUsuario({ ...userUpdate, username: e.target.value })}
               className="edit-input"
             />
             <button type="button" className="edit-button" onClick={() => handleEditarCampo('nombreUsuario')}>
@@ -76,12 +109,12 @@ const EditarPerfil = (props) => {
         <br />
 
         <label>
-          Contraseña:
+          Rol:
           <div className="edit-button-container contrasena-container">
             <input readOnly
               type={mostrarContrasena ? 'text' : 'password'}
-              value={usuario.contrasena}
-              onChange={(e) => setUsuario({ ...usuario, contrasena: e.target.value })}
+              value={usuario.rol}
+              onChange={(e) => setUsuario({ ...usuario, rol: e.target.value })}
               className="edit-input"
             />
            <button type="button" className="edit-button" onClick={() => handleEditarCampo('correo')}> 
@@ -92,7 +125,7 @@ const EditarPerfil = (props) => {
 
         <br />
 
-        <button type="submit" className="boton-nicole-lo">
+        <button type="submit" className="boton-nicole-lo" onClick={actualizarPerfil}>
           Actualizar
         </button>
       </form>
