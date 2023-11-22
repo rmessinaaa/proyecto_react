@@ -31,7 +31,7 @@ export default function MyCarousel() {
   </div>
 
   <div className="carousel-item">
-    <img src="/ilustraciones/uno.jpg" className="d-block w-100 h-100" alt="344" />
+    <img src="/ilustraciones/dos.jpg" className="d-block w-100 h-100" alt="344" />
     <div className="carousel-caption d-none d-md-block custom-carousel-caption">
       <h5>Sé parte del cambio que queremos ver en el mundo</h5>
       <p>El mundo necesita héroes, y tú puedes ser uno de ellos. Tu donación no solo es un gesto de generosidad, es un acto de valentía que desencadenará una cadena de bondad y solidaridad. Únete a nosotros en esta travesía de impacto y cambio</p>
