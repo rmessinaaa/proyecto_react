@@ -16,44 +16,12 @@ const SubsBuscadorResultados = () => {
         credentials: 'include'
       }
     })
-<<<<<<< HEAD
-    .then((res) => res.json())
-    .then((data) => setData(data))
-    .catch((error) => {
-      console.error('Error en la solicitud:', error);
-    });
-  }, []);
-
-  
-  
-    
-    
-    
-    return (
-        <div>
-            <div className="row align-items-center justify-content-center centrar contenido">
-                <div className="col-md-4 text-center centrar-contenido">
-                    {nombres.map((campaign) => (<VerticalCards
-                      key={campaign._id}
-                      title={campaign.title}
-                      description={campaign.description}
-            
-                    /> ))} 
-                </div>
-                
-            </div>
-            
-        </div>
-    )
-}
-=======
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => {
         console.error('Error en la solicitud:', error);
       });
   }, []);
->>>>>>> acacd92710c9a545c8b709b71c6bd23450b655d8
 
   const paginatedData = data.slice((currentPage - 1) * cardsPerPage, currentPage * cardsPerPage);
 
