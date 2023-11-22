@@ -10,6 +10,10 @@ const VistaCampañas = (props) => {
     props.onDeleteCampaign();
   };
 
+  //console.logs de prueba
+  console.log(localStorage.getItem.username);
+  console.log(localStorage.getItem.email);
+
   return (
     <div className="container">
       <div className="row">
