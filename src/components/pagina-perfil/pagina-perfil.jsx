@@ -47,7 +47,34 @@ function PaginaPerfil() {
   const handleRol = (event) => {
     setRol(event.target.value);
   }
-  
+  const userUpdate = {
+    username,
+    email,
+    rol,
+  }
+function actualizarPerfil(){
+    const id = window.localStorage.getItem("id")
+    const idarreglado = id.replace(/['"]+/g, '')
+    fetch(`http://localhost:8080/api/profile/${idarreglado}`, {
+    method: 'PUT',
+    headers: { 
+      'Content-Type': 'application/json',
+      credentials : 'include',
+      acces_token: token
+    },
+    body: JSON.stringify("")
+  })
+  .then((res) => res.json())
+  .then((data) => console.log(data))
+  .catch((error) => {
+    console.error('Error en la solicitud:', error);
+  })}
+
+
+    
+
+
+console.log(usuario)
 
   return (
     <div className='bg-paginas bg-perfil'>
