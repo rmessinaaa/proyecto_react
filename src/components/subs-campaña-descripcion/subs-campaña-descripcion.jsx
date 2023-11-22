@@ -2,7 +2,14 @@ import React from 'react';
 
 function SubsCampañaDescripcion () {
     return(
+        
         <div className="container-fluid container-fluid-blanco">
+            <div className='bg-paginas'>
+            <div className="container-fluid">
+                <div className='container container-blanco'>
+                    <h1 className='titulos-principales'>Nombre campaña</h1>
+                </div>
+            </div>
             <div className='container container-blanco'>
                 <div className="row align-items-center justify-content-center">
                     <h2 className="titulo-secundario-azul">Descripción</h2>
@@ -17,6 +24,7 @@ function SubsCampañaDescripcion () {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 };
