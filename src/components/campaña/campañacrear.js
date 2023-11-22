@@ -158,12 +158,13 @@ function CreateCampaign() {
       headers: {
         'Content-Type': 'application/json',
         credentials : 'include',
-        acces_token: token
+        acces_token: token,
+        Accept: "/"
       },
       body: JSON.stringify(bodyImage)                
     })
     .then(res => res.json())
-    .then(res => console.log(res))
+    .then(data => setFileName(data))
     .catch(err => console.error("error", err))
     
     
@@ -261,15 +262,15 @@ function CreateCampaign() {
                 <p className="subtitulo">Tipo de Cuenta</p>
                 <select
                   className="entrada"
-                  value={tipoCuenta}
+                  value={accountType}
                   onChange={handleTipoCuentaChange}
                 >
                   <option value="" disabled defaultValue>
                     Seleccione un tipo de cuenta
                   </option>
-                  <option value="cuentaVista">Cuenta Vista</option>
-                  <option value="cuentaCorriente">Cuenta Corriente</option>
-                  <option value="cuentaRUT">Cuenta Rut</option>
+                  <option value="Cuenta Vista">Cuenta Vista</option>
+                  <option value="Cuenta Corriente">Cuenta Corriente</option>
+                  <option value="Cuenta Rut">Cuenta Rut</option>
                 </select>
               </div>
 
@@ -327,6 +328,7 @@ function CreateCampaign() {
             <div className="imagen-contenedor">
               <img
                 src={filename}
+                name = "image"
                 alt="Imagen de la campaña"
                 className="imagen-preview"
               />

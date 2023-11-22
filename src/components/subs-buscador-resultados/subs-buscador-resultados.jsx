@@ -23,11 +23,13 @@ function SubsBuscadorResultados () {
       }
     })
     .then((res) => res.json())
-    .then((data) => console.log(data))
+    .then((data) => setData(data))
     .catch((error) => {
       console.error('Error en la solicitud:', error);
     });
   }, []);
+
+  
   
     
     
