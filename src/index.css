@@ -189,6 +189,8 @@ a:visited {
 .custom-dropdown-menu {
   background-color: #00293A;
   color: #fff;
+  display: block;
+
 }
 
 /* Estilos para los elementos del menú desplegable */

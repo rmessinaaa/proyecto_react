@@ -19,9 +19,9 @@ const topNav = [
   { id: 1, label: Iniciar, href: "/" },
   { id: 2, label: Buscar, href: "/buscar" },
   // { id: 3, label: Donaciones, href: "/donaciones" },
-  { id: 4, label: Nosotros, href: "/nosotros" },
-  { id: 5, label: Perfil, href: "/perfil" },
-  { id: 6, label: DropdownLinks, href: "/instituciones" },
+  { id: 3, label: Nosotros, href: "/nosotros" },
+  { id: 4, label: Perfil, href: "/perfil" },
+  { id: 5, label: DropdownLinks, href: "" },
   { id: 7, label: logout, href: "/cerrar-sesion" },
 ];
 
