@@ -1,18 +1,16 @@
 import React from "react";
 
 const VistaCampañas = (props) => {
-  const { title } = props;
+  const { title, onDeleteCampaign, campaignId } = props;
 
-  const handleDelete = () => {
-    // Función para eliminar la campaña
-    console.log("Campaña eliminada");
-    // Llamar a la función proporcionada por el padre
-    props.onDeleteCampaign();
+  const handleDelete = async () => {
+    try {
+      // Llama a onDeleteCampaign con la id de la campaña cuando se hace clic en la cruz
+      onDeleteCampaign(campaignId);
+    } catch (error) {
+      console.error('Error al eliminar la campaña:', error.message);
+    }
   };
-
-  //console.logs de prueba
-  console.log(localStorage.getItem.username);
-  console.log(localStorage.getItem.email);
 
   return (
     <div className="container">
@@ -45,3 +43,4 @@ const VistaCampañas = (props) => {
 };
 
 export default VistaCampañas;
+
