@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import "./infoPersonal.css"
 
 const EditarPerfil = (props) => {
-  const {username, email, password, rol} = props
+  const {username, email, rol} = props
   const [usuario, setUsuario] = useState({
     nombreUsuario: username,
     correo: email,
-    contrasena: password,
     rol: rol,
   });
   const token = window.localStorage.getItem("token")
@@ -60,7 +59,7 @@ const EditarPerfil = (props) => {
   const handleActualizar = (e) => {
     e.preventDefault();
     // Aquí puedes enviar los datos actualizados al servidor o realizar otras acciones
-    console.log('Datos actualizados:', usuario);
+    console.log('Datos actualizados:', userUpdate);
   };
 
   return (
@@ -97,7 +96,7 @@ const EditarPerfil = (props) => {
             <input 
               type="email" readOnly
               value={usuario.correo}
-              onChange={(e) => setUsuario({ ...usuario, correo: e.target.value })}
+              onChange={(e) => setUsuario({ ...userUpdate, correo: e.target.value })}
               className="edit-input"
             />
             <button type="button" className="edit-button" onClick={() => handleEditarCampo('correo')}>
@@ -112,9 +111,9 @@ const EditarPerfil = (props) => {
           Rol:
           <div className="edit-button-container contrasena-container">
             <input readOnly
-              type={mostrarContrasena ? 'text' : 'password'}
+              type= "text"
               value={usuario.rol}
-              onChange={(e) => setUsuario({ ...usuario, rol: e.target.value })}
+              onChange={(e) => setUsuario({ ...userUpdate, rol: e.target.value })}
               className="edit-input"
             />
            <button type="button" className="edit-button" onClick={() => handleEditarCampo('correo')}> 

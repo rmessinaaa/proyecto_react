@@ -11,7 +11,8 @@ function PaginaPerfil() {
   const [email, setEmail] = useState([]);
   const [rol, setRol] = useState([]);
   // const [password, setPassword] = useState([]);
-  const token = window.localStorage.getItem("token")
+  const token = window.localStorage.getItem("token");
+  const rolUser = window.localStorage.getItem("rol");
   //const username = window.localStorage.getItem("username")
   //const email = window.localStorage.getItem("email")
   useEffect(() => {
@@ -97,7 +98,7 @@ console.log(usuario)
                       key={usuario.id}
                       username={usuario.username}
                       email={usuario.email}
-                      rol={usuario.rol}
+                      rol={rolUser}
                     />
           </div>
         </div>
