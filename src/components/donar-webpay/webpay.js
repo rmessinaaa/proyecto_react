@@ -5,6 +5,7 @@ function TituloDonacion() {
   return <h2 className="titulo-secundario-blanco">Haz tu donación</h2>;
 }
 
+const token = localStorage.getItem("token")
 // Componente para el campo de monto de donación
 function MontoDonacion({ onDonar }) {
   const [monto, setMonto] = useState('');

@@ -44,6 +44,7 @@ const SubsBuscadorResultados = () => {
               <VerticalCards
                 title={campaign.title}
                 description={campaign.description}
+                campaignId={campaign._id}
               />
             </div>
           ))}
