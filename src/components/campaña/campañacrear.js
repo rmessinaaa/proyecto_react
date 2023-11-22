@@ -15,10 +15,8 @@ function CreateCampaign() {
   const [accountType, setAccountType] = useState("");
   const [accountNum, setAccountNum] = useState("");
   const [email, setEmail] = useState("");
-  const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
-<<<<<<< HEAD
   const [filename, setFileName] = useState(null);
-=======
+  const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
   const regiones = [
     "Región de Arica y Parinacota",
     "Región de Tarapacá",
@@ -37,7 +35,6 @@ function CreateCampaign() {
     "Región de Aysén del General Carlos Ibáñez del Campo",
     "Región de Magallanes y de la Antártica Chilena",
   ];
->>>>>>> abdca251c7b9958e7932411d7e28b90eed281261
 
   //Función para que no se vean las <p> en la descripción
   
@@ -260,23 +257,6 @@ function CreateCampaign() {
               </div>
 
               {/* Tipo de Cuenta */}
-<<<<<<< HEAD
-<div>
-  <p className="subtitulo">Tipo de Cuenta</p>
-  <select
-    className="entrada"
-    value={accountType}
-    onChange={handleTipoCuentaChange}
-  >
-    <option value="" disabled defaultValue>
-      Seleccione un tipo de cuenta
-    </option>
-    <option value="Cuenta Vista">Cuenta Vista</option>
-    <option value="Cuenta Corriente">Cuenta Corriente</option>
-    <option value="Cuenta RUT">Cuenta Rut</option>
-  </select>
-</div>
-=======
               <div>
                 <p className="subtitulo">Tipo de Cuenta</p>
                 <select
@@ -292,7 +272,6 @@ function CreateCampaign() {
                   <option value="cuentaRUT">Cuenta Rut</option>
                 </select>
               </div>
->>>>>>> abdca251c7b9958e7932411d7e28b90eed281261
 
               {/* Número de Cuenta */}
               <div>
