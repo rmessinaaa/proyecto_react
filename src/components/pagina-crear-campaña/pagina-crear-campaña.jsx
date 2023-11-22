@@ -7,7 +7,7 @@ function PaginaCrearCampaña() {
   return (
     <div className='bg-paginas bg-crearCampaña'>
       <div className='container'>
-        <h1 className='titulo' style={{ fontSize: '3rem' }}>Crea tu campaña de donación y haz la diferencia! </h1>
+        <h1 className='titulo' style={{ fontSize: '2rem' }}>Crea tu campaña de donación  </h1>
         <div className='contenido'>
           <div className='row align-items'>
             <div className='col'>
