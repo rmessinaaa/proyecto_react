@@ -3,7 +3,7 @@ import './Iniciar-sesion.css';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
-import RecuperarContraseña from '../Recuperar-contraseña/recuperar-contraseña'
+// import RecuperarContraseña from '../Recuperar-contraseña/recuperar-contraseña'
 
 const IniciarSesion = () => {
   const navigate = useNavigate();
@@ -196,9 +196,9 @@ const IniciarSesion = () => {
           <button onClick={handleSubmit} className='dos-botones'>Siguiente</button>
         </div>
         <div className='container-fluid div-cinco'>
-          <Link to='#' onClick={togglePopup} className='dos-botones'>
+          {/* <Link to='#' onClick={togglePopup} className='dos-botones'>
             ¿Olvidaste tu contraseña?
-          </Link>
+          </Link> */}
         </div>
         {/* Popup para recuperar contraseña */}
         {showPopup && (
@@ -213,7 +213,7 @@ const IniciarSesion = () => {
               </div>
               </div>
               
-              <RecuperarContraseña/>
+              {/* <RecuperarContraseña/> */}
             </div>
           </div>
         )}
