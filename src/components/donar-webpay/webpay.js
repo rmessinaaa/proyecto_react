@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './webpay.css';
 
@@ -18,7 +17,25 @@ function MontoDonacion({ onDonar }) {
 
   const handleDonar = () => {
     if (monto) {
-      onDonar(parseInt(monto, 10));
+      // Enviar la información de la donación al servidor
+      fetch("http://localhost:8080/api/campanas", {
+        method: 'PUT',  // Utilizamos PUT en lugar de POST para actualizar la campaña existente
+        headers: {
+          'Content-Type': 'application/json',
+          credentials: 'include',
+          acces_token: token,  // Asegúrate de obtener el token de donde sea necesario
+        },
+        body: JSON.stringify({ monto }),  // Enviamos el monto de la donación al servidor
+      })
+      .then(res => res.json())
+      .then(res => {
+        // Manejar la respuesta del servidor si es necesario
+        console.log(res);
+        // También puedes llamar a onDonar aquí si necesitas realizar alguna acción adicional
+      })
+      .catch(err => console.error("error", err));
+
+      // Limpiar el estado después de la donación
       setMonto('');
     }
   };
