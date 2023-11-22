@@ -48,7 +48,7 @@ function Main() {
             <Route path='/nosotros' element={<PaginaNosotros />} /> 
             <Route path='/buscar' element={<PaginaBuscador />} />
             <Route path='/perfil' element={<PaginaPerfil />} />
-            <Route path='/ficha-campaña' element={<PaginaCampaña />} />
+            <Route path='/ficha-campaña/:campaignId' element={<PaginaCampaña />} />
             <Route path='/tus-campañas' element={<Pagina_Tus_Campañas />} />
             <Route path='/crear-campaña' element={<PaginaCrearCampaña />} />
           </Routes>
