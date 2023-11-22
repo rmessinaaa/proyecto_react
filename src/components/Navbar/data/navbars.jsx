@@ -11,18 +11,18 @@ const Buscar = <NavLink to="/buscar">Buscar</NavLink>;
 const Nosotros = <NavLink to="/nosotros">Nosotros</NavLink>;
 const Perfil = <NavLink to="/perfil">Perfil</NavLink>;
 
-const logout = <CerrarSesion />
+const logout = <CerrarSesion />;
 
-const DropdownLinks = <DropdownInstituciones />
+const DropdownLinks = <DropdownInstituciones />;
 
 const topNav = [
-  { id: 1, label: Iniciar, href: "#" },
-  { id: 2, label: Buscar, href: "#" },
-  // { id: 3, label: Donaciones, href: "#" },
-  { id: 4, label: Nosotros, href: "#" },
-  { id: 5, label: Perfil, href: "#" },
-  { id: 6, label: DropdownLinks, href: "#" },
-  { id: 7, label: logout, href: "#" },
+  { id: 1, label: Iniciar, href: "/" },
+  { id: 2, label: Buscar, href: "/buscar" },
+  // { id: 3, label: Donaciones, href: "/donaciones" },
+  { id: 4, label: Nosotros, href: "/nosotros" },
+  { id: 5, label: Perfil, href: "/perfil" },
+  { id: 6, label: DropdownLinks, href: "/instituciones" },
+  { id: 7, label: logout, href: "/cerrar-sesion" },
 ];
 
 export const getTopNav = () => {
