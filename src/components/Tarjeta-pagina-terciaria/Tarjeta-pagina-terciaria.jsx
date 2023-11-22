@@ -1,6 +1,7 @@
 import React from 'react';
 // import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import './Tarjeta-pagina-terciaria.css'
 
 const VerticalCards = (props) => {
   const {title, description, img, campaignId} = props
