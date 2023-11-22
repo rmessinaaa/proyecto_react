@@ -44,7 +44,7 @@ function PaginaCampaña () {
     return(
         <div className='bg-paginas'>
             <SubsCampañaDescripcion title={campaign.title} description={campaign.description} img={campaign.img}/>
-            <SubsCampañaStatus />
+            {/* <SubsCampañaStatus /> */}
             <SubsCampañaDonar />
         </div>
     );
