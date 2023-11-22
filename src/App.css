@@ -290,7 +290,9 @@ label {
 }
 .custom-dropdown {
   /* Personaliza el fondo del Dropdown */
-  background-color: #3498db; /* Puedes cambiar este color según tus preferencias */
+  background-color: #041825;
+  display: block;
+  /* Puedes cambiar este color según tus preferencias */
 }
 
 /* Personaliza el color del texto del Dropdown */
