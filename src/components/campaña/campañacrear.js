@@ -11,11 +11,11 @@ function CreateCampaign() {
   const [meta, setMeta] = useState("");
   const [account, setAccount] = useState("");
   const [category, setCategory] = useState("");
-  const [foto, setFoto] = useState(null);
   const [banco, setBanco] = useState("");
-  const [tipoCuenta, setTipoCuenta] = useState("");
-  const [numeroCuenta, setNumeroCuenta] = useState("");
+  const [accountType, setAccountType] = useState("");
+  const [accountNum, setAccountNum] = useState("");
   const [email, setEmail] = useState("");
+  const [filename, setFileName] = useState(null);
   const [mostrarOpcionesCuenta, setMostrarOpcionesCuenta] = useState(false);
   const regiones = [
     "Región de Arica y Parinacota",
@@ -72,7 +72,7 @@ function CreateCampaign() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setFoto(reader.result);
+        setFileName(reader.result);
       };
       reader.readAsDataURL(file);
 
@@ -86,11 +86,11 @@ function CreateCampaign() {
   };
 
   const handleTipoCuentaChange = (event) => {
-    setTipoCuenta(event.target.value);
+    setAccountType(event.target.value);
   };
 
   const handleNumeroCuentaChange = (event) => {
-    setNumeroCuenta(event.target.value);
+    setAccountNum(event.target.value);
   };
 
   const handleCorreoElectronicoChange = (event) => {
@@ -104,10 +104,10 @@ function CreateCampaign() {
     setMeta("");
     setAccount("");
     setCategory("");
-    setFoto(null);
+    setFileName(null);
     setBanco("");
-    setTipoCuenta("");
-    setNumeroCuenta("");
+    setAccountType("");
+    setAccountNum("");
     setEmail("");
   };
 
@@ -118,7 +118,7 @@ function CreateCampaign() {
 
   // Función para manejar el envío del formulario
   const handleFormSubmit = () => {
-    if(!title || !description || !meta || !category || !banco || !tipoCuenta || !numeroCuenta || !email){
+    if(!title || !description || !meta || !category || !banco || !accountType || !accountNum || !email){
       console.log("todos los campos son requeridos");
       return 
     }
@@ -128,11 +128,18 @@ function CreateCampaign() {
       description,
       meta,
       category,
-      banco,
-      tipoCuenta,
-      numeroCuenta,
-      email,
+      account : {
+        banco,
+        accountType,
+        accountNum,
+        email,
+      }
+      
     };
+    const bodyImage = {
+      filename,
+       
+    }
     const token = window.localStorage.getItem("token");
     fetch("http://localhost:8080/api/campanas", {
       method: 'POST',
@@ -145,6 +152,19 @@ function CreateCampaign() {
     })
     .then(res => res.json())
     .then(res => console.log(res))
+
+    fetch("http://localhost:8080/api/uploads", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        credentials : 'include',
+        acces_token: token
+      },
+      body: JSON.stringify(bodyImage)                
+    })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.error("error", err))
     
     
   };
@@ -259,7 +279,7 @@ function CreateCampaign() {
                 <input
                   className="entrada"
                   type="text"
-                  value={numeroCuenta}
+                  value={accountNum}
                   onChange={handleNumeroCuentaChange}
                   placeholder="Ingrese su número de cuenta"
 
@@ -303,14 +323,14 @@ function CreateCampaign() {
         {/* Fotos */}
         <div>
           <p className="subtitulo">Foto</p>
-          {foto && (
+          {filename && (
             <div className="imagen-contenedor">
               <img
-                src={foto}
+                src={filename}
                 alt="Imagen de la campaña"
                 className="imagen-preview"
               />
-              <button className="boton-eliminar" onClick={() => setFoto(null)}>
+              <button className="boton-eliminar" onClick={() => setFileName(null)}>
                 Eliminar Foto
               </button>
             </div>

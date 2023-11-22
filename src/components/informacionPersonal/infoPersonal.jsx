@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./infoPersonal.css"
 
-const EditarPerfil = () => {
+const EditarPerfil = (props) => {
+  const {username, email, password} = props
   const [usuario, setUsuario] = useState({
-    nombreUsuario: 'UsuarioEjemplo',
-    correo: 'correo@example.com',
-    contrasena: '',
+    nombreUsuario: username,
+    correo: email,
+    contrasena: password,
+
   });
 
   const [mostrarContrasena, setMostrarContrasena] = useState(false);
@@ -43,7 +45,7 @@ const EditarPerfil = () => {
           Nombre de Usuario:
           <div className="edit-button-container">
             <input
-              type="text"
+              type="text" readOnly 
               value={usuario.nombreUsuario}
               onChange={(e) => setUsuario({ ...usuario, nombreUsuario: e.target.value })}
               className="edit-input"
@@ -59,8 +61,8 @@ const EditarPerfil = () => {
         <label>
           Correo:
           <div className="edit-button-container">
-            <input
-              type="email"
+            <input 
+              type="email" readOnly
               value={usuario.correo}
               onChange={(e) => setUsuario({ ...usuario, correo: e.target.value })}
               className="edit-input"
@@ -76,7 +78,7 @@ const EditarPerfil = () => {
         <label>
           Contraseña:
           <div className="edit-button-container contrasena-container">
-            <input
+            <input readOnly
               type={mostrarContrasena ? 'text' : 'password'}
               value={usuario.contrasena}
               onChange={(e) => setUsuario({ ...usuario, contrasena: e.target.value })}

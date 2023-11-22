@@ -23,7 +23,7 @@ function SubsBuscadorResultados () {
       }
     })
     .then((res) => res.json())
-    .then((data) => setData(data))
+    .then((data) => console.log(data))
     .catch((error) => {
       console.error('Error en la solicitud:', error);
     });
