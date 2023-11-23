@@ -1,5 +1,5 @@
 .container-fluid-celeste {
-    background-color: #0597f2;
+    background-color: rgba(1, 191, 255, 0.443); /* Ajusta el valor alfa según sea necesario */
     border-radius: 50em;
   }
 
@@ -18,11 +18,11 @@
 .titulo-secundario-blanco{
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #f2f2f2;
+    color:#0f3240;
 }
 
 .parrafo-blanco{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    color: #f2f2f2
+    color: #0f3240;
 }

@@ -8,7 +8,7 @@ function PaginaNosotros() {
         <div className='bg-nosotros'>
             <div className="container-fluid">
                 <div className='container container-blanco'>
-                    <h1 className='titulos-principales'>¿De dónde nace Sinergia?</h1>
+                    <h1 className='titulos-principales'>Sobre sinergia </h1>
                 </div>
             </div>
             <SubsNosotrosHistoria />
