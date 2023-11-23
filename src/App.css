@@ -1,5 +1,8 @@
-.bg-paginas{
-  background-color: #f2f2f2;
+.bg-paginas {
+  background-image: url("/public/ilustraciones/12244.jpg");
+  background-size: cover;
+  background-repeat: repeat; /* Esto hará que el fondo se repita en ambas direcciones */
+  /* Otros estilos según sea necesario */
 }
 
 .container-fluid-blanco {

@@ -1,0 +1,38 @@
+.bg-crearCampaña {
+    /* Estilos para el fondo de páginas en general */
+    background-image: url("../../../public/ilustraciones/12244.jpg"); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;  /* Ajusta según tus necesidades */
+    /* Otros estilos según sea necesario */
+}
+
+ Agrega estas reglas a tu archivo de estilo campañacrear.css o el que estés utilizando */
+
+/* Estilos generales */
+.logo-overlay {
+  position: absolute;
+}
+
+.logo-overlay img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px; /* Ajusta según sea necesario */
+}
+
+/* Mueve el bloque de texto hacia arriba */
+.logo-overlay p {
+  position: relative;
+  top: -20px; /* Ajusta según sea necesario */
+}
+
+/* Agrega margen inferior al último párrafo para separarlo del componente Campañacrear */
+.logo-overlay p:last-child {
+  margin-bottom: 40px; /* Ajusta según sea necesario */
+}
+
+.titulo {
+    background-color: white;
+    padding: 15px; /* Ajusta según sea necesario */
+    display: block; /* Cambiado de inline-block a block */
+    margin: 0 auto; /* Alinear al centro horizontalmente */
+    text-align: center; /* Ajusta según sea necesario */
+  }

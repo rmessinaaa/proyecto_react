@@ -2,15 +2,19 @@
 
 
 @import "~react-quill/dist/quill.snow.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Estilos generales */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .contenedor {
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 430px;
-  border: 1px solid #0f3240;
   margin: 50px auto;
   background-color: #0597f2;
   border-radius: 15px;
@@ -18,9 +22,6 @@
   padding: 15px;
 }
 
-.contenedor:hover {
-  transform: scale(1.05);
-}
 
 .titulo {
   font-size: 1.2em;
@@ -30,13 +31,14 @@
   margin-top: 0.3em;
   margin-bottom: 0.5em;
   font-weight: bold;
+  font-family: 'Montserrat';
 }
 
 /* Estilos para subtítulos */
 .subtitulo {
   margin-top: 0.5em;
   margin-bottom: 0.3em;
-  font-family: 'Monserrart';
+  font-family: 'Montserrat'; /* Corregir el nombre de la fuente */
   color: rgb(0, 0, 0);
   padding: 0.5%;
   font-weight: bold;
@@ -48,6 +50,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-family: 'Montserrat';
 }
 
 /* Ajuste del contenedor de cada campo del formulario */
@@ -68,6 +71,7 @@
   color: #333; /* Cambia el color del texto según tus preferencias */
   background-color: white; /* Asegúrate de que el fondo sea visible */
 }
+
 /* Estilos de los botones */
 .boton {
   width: 100%;
