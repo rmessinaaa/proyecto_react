@@ -38,8 +38,8 @@ function CreateCampaign() {
   const handleNombreChange = (event) => {
     setTitle(event.target.value);
   };
-  const handleDescripcionChange = (value) => {
-    setDescription(value);
+  const handleDescripcionChange = (e) => {
+    setDescription(e.target.value);
   };
   const [region, setRegion] = useState("");
   const handleRegionChange = (event) => {
@@ -147,8 +147,15 @@ return (
       {/* Descripción */}
       <div>
         <p className="subtitulo">Descripción de campaña</p>
-        <ReactQuill
+        {/* <ReactQuill
           className="quill-editor"
+          value= {description}
+          onChange={handleDescripcionChange}
+          placeholder="Describa la campaña"
+        /> */}
+        <input
+          className="entrada"
+          type="text"
           value= {description}
           onChange={handleDescripcionChange}
           placeholder="Describa la campaña"
@@ -266,7 +273,7 @@ return (
         </select>
       </div>
       {/* Fotos */}
-      <div>
+      {/* <div>
         <p className="subtitulo">Foto</p>
         {filename && (
           <div className="imagen-contenedor">
@@ -288,7 +295,7 @@ return (
             src={filename}
             onChange={handleFotoChange}
           />
-      </div>
+      </div> */}
       {/* Botones */}
       <div className="botones-container">
         <div className="boton-div">

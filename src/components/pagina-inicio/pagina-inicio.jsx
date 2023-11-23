@@ -31,11 +31,11 @@ function PaginaInicio() {
       {/* Mostrar mensaje de bienvenida */}
       {username && (
         <div className="container-fluid-div-bienvenida">
-          <h1>Bienvenido, {username}!</h1>
+          <h1>¡Bienvenido, {username}!</h1>
         </div>
       )}
-      <Buscador />
-      <SubsHomeCampañas />
+      {/* <Buscador />
+      <SubsHomeCampañas /> */}
       <SubsHomeNosotros />
       <SubsHomePerfil />
       <br></br>

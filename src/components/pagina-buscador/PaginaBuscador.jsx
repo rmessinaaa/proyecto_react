@@ -5,34 +5,38 @@ import SubsBuscadorResultados from '../subs-buscador-resultados/subs-buscador-re
 
 function PaginaBuscador () {
     return (
-        <div className='bg-paginas'>
+        <div className='bg-paginas' style={{ paddingBottom: '150px' }}>
+
             <div>
             <div className="container-fluid">
                 <div className='container container-blanco'>
                     <h1 className='titulos-principales'>Buscador</h1>
                 </div>
             </div>
-            <div className='container-fluid'>
+            {/* <div className='container-fluid'>
                 <div className='container container-blanco'>
                     <p className='buscador-p'>Busca la campaña en la que quieras aportar.</p>
                     <form className='text-center'>
                         <input className='barra-busqueda' type="search" placeholder="Escribe tu búsqueda..." aria-label="Search"></input>
                     </form>
                 </div>
-            </div>
+            </div> */}
             <div className="row align-items-center justify-content-center contenedor-cards-resultados-busqueda">
-                <div className="col-md-4 text-center">
+                {/* <div className="col-md-4 text-center">
                     <h2 className="titulo-secundario-azul">Filtro</h2>
-                </div>
-                <div className="col-md-8 text-center">
-                    <h2 className="titulo-secundario-azul">Resultados de búsqueda</h2>
+                </div> */}
+                <div className="col-md-12 text-center">
+                    {/* cambiar a col-8 */}
+                    {/* <h2 className="titulo-secundario-azul">Resultados de búsqueda</h2> */}
+                    <h2 className="titulo-secundario-azul">Campañas disponibles</h2>
                 </div>
             </div>
             <div className="row align-items-center justify-content-center">
                 <div className="col-md-4 text-center">
-                    <SubsBuscadorFiltro />
+                    {/* <SubsBuscadorFiltro /> */}
                 </div>
-                <div className="col-md-8 text-center">
+                <div className="col-md-12 text-center">
+                    {/* cambiar a col-8 */}
                     <SubsBuscadorResultados />
                 </div>
             </div>           
