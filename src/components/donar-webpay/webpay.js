@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './webpay.css';
 
 function TituloDonacion() {
@@ -43,42 +43,75 @@ function MontoDonacion({ onDonar }) {
 
   return (
     <div className="text-center my-4">
-      <input
+      {/* <input
         type="text"
         className="form-control monto-donacion"
         placeholder="Monto de la donación"
         value={monto !== '' ? `$${parseInt(monto, 10).toLocaleString('es-CL')}` : ''}
         onChange={handleInputChange}
-      />
+      /> */}
       <div className="text-center my-4">
-        <button className="btn btn-primary button-azul" onClick={handleDonar} data-bs-toggle="modal" data-bs-target="#donarModal">
-          DONAR
-        </button>
+          <button className="button-azul" onClick={handleDonar} data-bs-toggle="modal" data-bs-target="#donarModal">
+            DONAR
+          </button>
       </div>
     </div>
   );
 }
 
 // Componente para el modal de información bancaria
-function DonarModal() {
+function DonarModal( { onDonar, datosCampaña } ) {
+
+  const { banco, tipoCuenta, numeroCuenta, correoElectronico, Titulo } = datosCampaña;
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyToClipboard = () => {
+    const textToCopy = `Usuario donante: ${localStorage.getItem('username')}\nNombre Campaña: ${Titulo}\nBanco: ${banco}\nTipo de cuenta: ${tipoCuenta}\nNúmero de cuenta: ${numeroCuenta}\nCorreo Electrónico: ${correoElectronico}`;
+
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => setCopied(true))
+      .catch((err) => console.error('Error al copiar al portapapeles', err));
+  };
+
   return (
     <div className="modal fade" id="donarModal" tabIndex="-1" aria-labelledby="donarModalLabel" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="donarModalLabel">Información bancaria para poder donar</h5>
+            <h5 className="modal-title" id="donarModalLabel"></h5>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div className="modal-body">
-            {/* Aquí puedes mostrar la información bancaria de la base de datos */}
-            <p>Banco: </p>
-            <p>Tipo de cuenta: </p>
-            <p>Número de cuenta: XXXX-XXXX-XXXX-XXXX</p>
-            <p>Correo Electrónico:</p>
-            {/* Otros detalles de la información bancaria */}
+            
+            <h1 className='titulos-principales'>Importante</h1>
+
+            <br></br>
+
+            <p className='parrafo-azul'>Tu donación se hará efectiva mediante un intermediario de Sinergia. Para prevenir problemas, por favor copia y pega los siguientes datos en el mensaje de tu transferencia, ¡nos ayudará a que tu donación llegue a su destino!</p>
+
+            <p className='parrafo-azul'>Usuario donante: { localStorage.getItem('username') }</p>
+            <p className='parrafo-azul'>Nombre Campaña: {Titulo}</p>
+            <p className='parrafo-azul'>Banco: {banco} </p>
+            <p className='parrafo-azul'>Tipo de cuenta: {tipoCuenta} </p>
+            <p className='parrafo-azul'>Número de cuenta: {numeroCuenta}</p>
+            <p className='parrafo-azul'>Correo Electrónico: {correoElectronico} </p>
+           
+            <br></br>
+            
+            <button className="button-azul" onClick={handleCopyToClipboard}>
+              {copied ? 'Copiado' : 'Copiar al Portapapeles'}
+            </button>
+
+            <a href="https://www.paypal.com/donate/?hosted_button_id=QTTYHM88RKHZW" target="_blank" rel="noopener noreferrer">
+              <button className="button-azul">
+                DONAR
+              </button>
+            </a>
+
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button> */}
           </div>
         </div>
       </div>
@@ -129,7 +162,42 @@ function HistorialDonaciones({ historial }) {
 
 // Componente principal
 function TarjetaDonacion() {
+  
   const [historialDonaciones, setHistorialDonaciones] = useState([]);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [datosCampaña, setDatosCampaña] = useState({});
+
+  const pathname = window.location.pathname;
+  const parts = pathname.split('/');
+  const campaignId = parts[parts.length - 1];
+  const token = localStorage.getItem("token");
+
+  useEffect(() => {
+    // Obtener los datos de la campaña desde tu API o de donde sea
+    // Puedes usar un ID de campaña o cualquier lógica para obtener los datos correctos
+    fetch(`http://localhost:8080/api/campanas/${campaignId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        credentials : 'include',
+        acces_token: token,
+        // Agrega tu lógica de manejo de tokens aquí si es necesario
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // Actualizar los datos de la campaña en el estado
+        setDatosCampaña({
+          banco: data.account.banco,
+          tipoCuenta: data.account.accountType, // Puedes cambiar esto según tus datos reales
+          numeroCuenta: data.account.accountNum, // Puedes cambiar esto según tus datos reales
+          correoElectronico: data.account.email,
+          Titulo: data.title
+        });
+      })
+      .catch((error) => console.error("Error al obtener datos de la campaña:", error));
+  }, []);
+
 
   const handleDonar = (monto) => {
     setHistorialDonaciones([...historialDonaciones, monto]);
@@ -146,8 +214,8 @@ function TarjetaDonacion() {
           </div>
           <DescripcionDonacion />
         </div>
-        <DonarModal />
-        <HistorialDonaciones historial={historialDonaciones} />
+        <DonarModal onDonar={handleDonar} datosCampaña={datosCampaña} />
+        {/* <HistorialDonaciones historial={historialDonaciones} /> */}
       </div>
     </div>
   );

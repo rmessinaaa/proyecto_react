@@ -20,7 +20,7 @@ const VistaCampañas = (props) => {
             <div className="col-6 centrar-contenido">
               <h3 className='meta-computo-title' id="envoltura-campañas">{title}</h3>
             </div>
-            <div className="col-4 centrar-contenido">
+            <div className="col-4 centrar-contenido opacidad0">
               <button to="#" type="button" className="button-azul">Editar</button>
             </div>
             <div className="col-2 centrar-contenido cruz">
