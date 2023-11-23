@@ -1,0 +1,6 @@
+.bg-nosotros {
+    /* Estilos para el fondo de páginas en general */
+    background-image: url("../../../public/ilustraciones/12244.jpg"); /* Cambia esto a la ruta de tu imagen */
+    background-size: cover;  /* Ajusta según tus necesidades */
+    /* Otros estilos según sea necesario */
+}
