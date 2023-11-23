@@ -10,7 +10,7 @@ function PaginaLogin() {
           <div className="col">
             <img src="./logos/sinergia-imagotipo-oscuro copia 2.svg" alt="Logo" />
             <div className="logo-overlay">
-              <h1>¡Bienvenido de vuelta a Sinergia!</h1>
+              <h1>¡Bienvenido de vuelta a Sinergia!</h1> <br></br>
               <p>En Sinergia, cada inicio de sesión es un paso más hacia la creación de un impacto positivo.</p>
               <p><strong>Tu cuenta, tu impacto.</strong></p>
               <p>Inicia sesión hoy y continúa tu viaje hacia una vida llena de propósito y significado.</p>

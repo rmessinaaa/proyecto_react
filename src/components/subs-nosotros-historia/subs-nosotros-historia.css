@@ -1,6 +1,7 @@
 .container-fluid-blanco {
-    background-color: #F2F2F2;
+    background-color: rgba(242, 242, 242, 0.5); /* Ajusta el valor alfa según sea necesario */
     border-radius: 50em;
+    
   }
 
 .container-blanco{

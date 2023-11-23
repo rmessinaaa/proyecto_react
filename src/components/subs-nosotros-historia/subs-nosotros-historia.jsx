@@ -13,9 +13,7 @@ function SubsNosotrosHistoria(){
                         <img src="ilustraciones/home-nosotros.svg" alt="Nosotros" />  
                     </div>
                     <div className="col-md-6 text-center">
-                        <p className="parrafo-celeste">En septiembre de 2023, nació Sinergia como respuesta a un desafío global urgente: <strong>la lucha contra la pobreza</strong>, un objetivo plasmado en el ODS 1 de la ONU.</p>
-                        <p className="parrafo-celeste">La organización se originó como parte de un proyecto integrador en el bootcamp de desarrollo web full stack JavaScript de Generation Chile, con la visión de contribuir desde el mundo digital a los esfuerzos para erradicar la pobreza. Desde entonces, hemos estado comprometidos en la creación de un <strong>puente sólido entre instituciones y personas que desean marcar la diferencia</strong>.</p>
-                        <p className="parrafo-celeste">Nuestra historia está marcada por el impulso de convertir la motivación en acción concreta y por la construcción de comunidades que se unen en la lucha contra la pobreza.</p>
+                        <p className="parrafo-celeste">Sinergia, nacida en septiembre de 2023 como respuesta a la lucha global contra la pobreza (ODS 1 de la ONU), se originó en un proyecto integrador durante el bootcamp de desarrollo web de Generation Chile. Comprometida con contribuir desde el mundo digital, la organización ha construido un puente entre instituciones y personas para marcar la diferencia en la erradicación de la pobreza, convirtiendo la motivación en acción concreta y construyendo comunidades comprometidas.</p>
                     </div>
                 </div>
             </div>
