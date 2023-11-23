@@ -98,8 +98,9 @@ function CreateCampaign() {
     event.preventDefault();
     if(!title || !description || !meta || !category || !banco || !accountType || !accountNum || !email){
       console.log("todos los campos son requeridos");
-      return
+      return;
     }
+    alert("La campaña se ha creado con éxito");
     // Aquí puedes implementar la lógica para enviar los datos del formulario
     const formulario = {
       title,
